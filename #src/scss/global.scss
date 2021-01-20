@@ -1,0 +1,27 @@
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+
+  $purpure-light:#9D5CD0;
+  $purpure-link: #C283F3;
+
+  button{
+    background-color: transparent;
+    outline-color: $purpure-light;
+    outline-color: #C283F3;
+    transition: all .3s;
+    &:hover{
+      color: #C283F3;
+    }
+    &:active{
+      color: #9D5CD0;
+    }
+  }
