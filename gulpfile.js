@@ -83,15 +83,12 @@ function css() {
 		.pipe(
 			autoprefixer({
 				grid: true,
-				overrideBrowserslist: ["last 5 versions"],
+				overrideBrowserslist: ["last 8 versions"],
 				cascade: true
 			})
 		)
 		.pipe(webpcss(
-			{
-				webpClass: "._webp",
-				noWebpClass: "._no-webp"
-			}
+
 		))
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
@@ -132,6 +129,7 @@ gulp.task("style", function () {
 	return gulp
 	  .src([
 	  "node_modules/simplebar/dist/simplebar.min.css",
+	  "node_modules/animate.css/animate.min.css",
 	 ])
 	  .pipe(concat("libs.min.css"))
 	  .pipe(cssmin())

@@ -55,8 +55,21 @@ body {
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
 	max-width: $maxWidthContainer + px;
-	padding: 0 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 	margin: 0 auto;
+}
+@media(max-width:1024px){
+	.container{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+@media(max-width:700px){
+	.container{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -70,6 +83,8 @@ body {
 //@import "pagging";
 // @import "popup";
 @import "header";
+@import "hero";
+@import "about";
 @import "footer";
 @import "home";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

@@ -1,0 +1,286 @@
+.hero{
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    &__block {
+        padding: 0 20px;
+        position: absolute;
+        top: 140px;
+        left: -3px;
+        color: #fff;
+        line-height: 84px;
+        }
+
+    &__inner {
+            position: relative;;
+            z-index: 5;
+            
+            }
+            
+        
+    &__title {
+        font-weight: 700;
+        font-size: 72px;
+        margin-bottom: 18px;
+        max-width: 600px;
+        
+        }
+        &__btn, &__text{
+            margin-left: 4px;
+        }
+     &__text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 85px;
+        max-width: 610px;
+        }
+
+    &__btn{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 22px 35px;
+        color: #fff;
+        background-color: #9D5CD0;
+        border-radius: 100px;
+        &:hover{
+            transition: all .3s;
+            color: #fff;
+            border: 3px solid #D1A9F0;
+        }
+        &:active{
+            color: #fff;
+            background-color: #7943A4;
+        }
+    }
+
+    &__slideshow,
+    &__slideshow:after {
+        width: 100%;
+        height: 800px;
+        z-index: 0;
+    }
+
+    &__slideshow &__slideshow-item &__slideshow-img{
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        background-color: $purpure-light;
+        z-index: 0;
+        animation: imageAnimation 36s linear infinite 0s;
+        // background-image: url(../img/1920/hero-img1-1920px.jpg);
+    }
+
+    &__slideshow &__slideshow-item:nth-child(1) &__slideshow-img{
+        background-image: url(../img/1920/hero-img1-1920px.jpg);
+    }
+    &__slideshow &__slideshow-item:nth-child(2) &__slideshow-img{
+        background-image: url(../img/1920/hero-img2-1920.jpg);
+        animation-delay: 6s;
+    }
+    &__slideshow &__slideshow-item:nth-child(3) &__slideshow-img{
+        background-image: url(../img/1920/hero-img3-1920.jpg);
+        animation-delay: 12s;
+    }
+    &__slideshow &__slideshow-item:nth-child(4) &__slideshow-img{
+        background-image: url(../img/1920/hero-img1-1920px.jpg);
+        animation-delay: 18s;
+    }
+    &__slideshow &__slideshow-item:nth-child(5) &__slideshow-img{
+        background-image: url(../img/1920/hero-img2-1920.jpg);
+        animation-delay: 24s;
+    }
+    &__slideshow &__slideshow-item:nth-child(6) &__slideshow-img{
+        background-image: url(../img/1920/hero-img3-1920.jpg);
+        animation-delay: 30s;
+    }
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    8% {
+        opacity: 1;
+        transform: scale(1.05);
+        animation-timing-function: ease-out;
+    }
+    17% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    25% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% { opacity: 0 }
+}
+
+@media(max-width:1024px){
+.hero{
+height: 666px;
+    &__text{
+    max-width: 666px;
+    margin-bottom: 127px;
+    }
+    &__block{
+        top: 110px;
+        left: 24px;
+    }
+    &__title{
+        margin-bottom: 10px;
+    }
+    &__slideshow &__slideshow-item &__slideshow-img{
+        height: 666px;
+    }
+    &__slideshow &__slideshow-item:nth-child(1) &__slideshow-img{
+        background-image: url(../img/1024/hero-img1-1024.jpg);
+    }
+    &__slideshow &__slideshow-item:nth-child(2) &__slideshow-img{
+        background-image: url(../img/1024/hero-img2-1024.jpg);
+        animation-delay: 6s;
+    }
+    &__slideshow &__slideshow-item:nth-child(3) &__slideshow-img{
+        background-image: url(../img/1024/hero-img3-1024.jpg);
+        animation-delay: 12s;
+    }
+    &__slideshow &__slideshow-item:nth-child(4) &__slideshow-img{
+        background-image: url(../img/1024/hero-img1-1024.jpg);
+        animation-delay: 18s;
+    }
+    &__slideshow &__slideshow-item:nth-child(5) &__slideshow-img{
+        background-image: url(../img/1024/hero-img2-1024.jpg);
+        animation-delay: 24s;
+    }
+    &__slideshow &__slideshow-item:nth-child(6) &__slideshow-img{
+        background-image: url(../img/1024/hero-img3-1024.jpg);
+        animation-delay: 30s;
+    }
+}
+}
+
+@media(max-width:630px){
+    .hero{
+    height: 666px;
+        &__inner{
+            padding: 0;
+        }
+        &__title{
+            text-align: center;
+            margin-bottom: 150px;
+        }
+        &__text{
+        font-size: 20px;
+        margin-left: 0;
+        max-width: auto;
+        text-align: center;
+        }
+        &__block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+        }
+        &__title{
+            font-size: 32px;
+        }
+        &__slideshow &__slideshow-item &__slideshow-img{
+            height: 666px;
+        }
+        &__slideshow &__slideshow-item:nth-child(1) &__slideshow-img{
+            background-image: url(../img/768/hero-img1-768.jpg);
+        }
+        &__slideshow &__slideshow-item:nth-child(2) &__slideshow-img{
+            background-image: url(../img/768/hero-img2-768.jpg);
+            animation-delay: 6s;
+        }
+        &__slideshow &__slideshow-item:nth-child(3) &__slideshow-img{
+            background-image: url(../img/768/hero-img3-768.jpg);
+            animation-delay: 12s;
+        }
+        &__slideshow &__slideshow-item:nth-child(4) &__slideshow-img{
+            background-image: url(../img/768/hero-img1-768.jpg);
+            animation-delay: 18s;
+        }
+        &__slideshow &__slideshow-item:nth-child(5) &__slideshow-img{
+            background-image: url(../img/768/hero-img2-768.jpg);
+            animation-delay: 24s;
+        }
+        &__slideshow &__slideshow-item:nth-child(6) &__slideshow-img{
+            background-image: url(../img/768/hero-img3-768.jpg);
+            animation-delay: 30s;
+        }
+    }
+    }
+
+    @media(max-width:321px){
+        .hero{
+        height: 310px;
+            &__block{
+                top: 32px;
+                left: 3px;
+            }
+            &__inner{
+                padding: 0;
+            }
+            &__title{
+            font-size: 32px;
+            line-height: 38px;
+            margin-bottom: 10px;
+            max-width: 251px;
+            }
+            &__text{
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            margin-bottom: 42px;
+            max-width: 275px;
+            }
+            &__btn{
+            padding: 8px 17px;
+            font-size: 12px;
+            font-weight: 700;
+            }
+
+
+
+            &__slideshow &__slideshow-item &__slideshow-img{
+                height: 310px;
+            }
+            &__slideshow &__slideshow-item:nth-child(1) &__slideshow-img{
+                background-image: url(../img/320/hero-img1-320.jpg);
+            }
+            &__slideshow &__slideshow-item:nth-child(2) &__slideshow-img{
+                background-image: url(../img/320/hero-img2-320.jpg);
+                animation-delay: 6s;
+            }
+            &__slideshow &__slideshow-item:nth-child(3) &__slideshow-img{
+                background-image: url(../img/320/hero-img3-320.jpg);
+                animation-delay: 12s;
+            }
+            &__slideshow &__slideshow-item:nth-child(4) &__slideshow-img{
+                background-image: url(../img/320/hero-img1-320.jpg);
+                animation-delay: 18s;
+            }
+            &__slideshow &__slideshow-item:nth-child(5) &__slideshow-img{
+                background-image: url(../img/320/hero-img2-320.jpg);
+                animation-delay: 24s;
+            }
+            &__slideshow &__slideshow-item:nth-child(6) &__slideshow-img{
+                background-image: url(../img/320/hero-img3-320.jpg);
+                animation-delay: 30s;
+            }
+        }
+        }

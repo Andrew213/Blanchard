@@ -68,4 +68,12 @@ function activateHeaderMenu(event){
     }
 }
 
+let heroEl = document.querySelector('.hero');
+let body = document.body;
+
+// setTimeout(()=>{
+// heroEl.classList.add('hero__bg--3')
+// },1000)
+
 addClickListener()
+
