@@ -225,6 +225,63 @@ height: 666px;
     }
     }
 
+
+    @media(max-width:480px){
+        .hero{
+        height: 666px;
+            &__inner{
+                padding: 0;
+            }
+            &__title{
+            line-height: 2;
+            margin-bottom: 90px;
+            }
+            &__text{
+            font-size: 20px;
+            margin-left: 0;
+            max-width: auto;
+            text-align: center;
+            }
+            &__block{
+            top: 50px;
+            }
+            &__title{
+                font-size: 32px;
+            }
+            &__slideshow &__slideshow-item &__slideshow-img{
+                height: 666px;
+            }
+            &__slideshow &__slideshow-item:nth-child(1) &__slideshow-img{
+                background-image: url(../img/768/hero-img1-768.jpg);
+            }
+            &__slideshow &__slideshow-item:nth-child(2) &__slideshow-img{
+                background-image: url(../img/768/hero-img2-768.jpg);
+                animation-delay: 6s;
+            }
+            &__slideshow &__slideshow-item:nth-child(3) &__slideshow-img{
+                background-image: url(../img/768/hero-img3-768.jpg);
+                animation-delay: 12s;
+            }
+            &__slideshow &__slideshow-item:nth-child(4) &__slideshow-img{
+                background-image: url(../img/768/hero-img1-768.jpg);
+                animation-delay: 18s;
+            }
+            &__slideshow &__slideshow-item:nth-child(5) &__slideshow-img{
+                background-image: url(../img/768/hero-img2-768.jpg);
+                animation-delay: 24s;
+            }
+            &__slideshow &__slideshow-item:nth-child(6) &__slideshow-img{
+                background-image: url(../img/768/hero-img3-768.jpg);
+                animation-delay: 30s;
+            }
+            &__btn{
+                padding: 8px 17px;
+                font-size: 12px;
+                font-weight: 700;
+                }
+        }
+        }
+
     @media(max-width:321px){
         .hero{
         height: 310px;
@@ -248,11 +305,7 @@ height: 666px;
             margin-bottom: 42px;
             max-width: 275px;
             }
-            &__btn{
-            padding: 8px 17px;
-            font-size: 12px;
-            font-weight: 700;
-            }
+
 
 
 
