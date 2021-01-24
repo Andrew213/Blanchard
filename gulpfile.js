@@ -118,12 +118,14 @@ function js() {
 
 gulp.task("script", function () {
 	return gulp
-	  .src(path.src.libs,)
+	  .src([path.src.libs,
+		"node_modules/focus-visible/dist/focus-visible.min.js"
+	])
 	  .pipe(concat("libs.min.js"))
 	  .pipe(uglify())
 	  .pipe(dest(path.build.js));
   });
-
+  
   
 gulp.task("style", function () {
 	return gulp

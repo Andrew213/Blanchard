@@ -2,9 +2,9 @@
 	<h1 class="visually-hidden">Художественная галлерея Blanchard</h1>
 	<div class="header__inner container">
 		<div class="header__top">
-			<button aria-label="Меню" type="button" class="header__burger"><span></span></button>
+			<button aria-label="Меню" type="button" class="header__burger button"><span></span></button>
 
-			<button class="header__logo" >
+			<button class="header__logo button" >
 				<picture>
 					<source 
 					srcset="img/logo--700px.png" type="image/webp"
@@ -21,20 +21,21 @@
 			<!-- <button class="header__logo--1024px" ><img src="img/logo--1024.png" alt="Логотип сайта"></button> -->
 			<button aria-label="Поиск по сайту" type="button" class="header__searchBtn--1024px"></button>
 			<div tabindex="1" class="header__search-wrapper--1024px">
-				<input type="search" placeholder="Поиск по сайту" class="header__search--1024px">			</div>
+				<input type="search" placeholder="Поиск по сайту" class="header__search--1024px">
+			</div>
 			<nav class="header__nav">
 				<ul class="header__menu">
-					<li class="header__menu-item"><button type="button"  class="header__menu-link">О нас</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link">Галерея</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link">Каталог</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link">События</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link">Издания</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link">Проекты</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link">Контакты</button></li>
-					<li class="header__menu-item"><button type="button" class="header__login header__login--1024px">Войти</button></li>
+					<li class="header__menu-item"><button type="button"  class="header__menu-link button">О нас</button></li>
+					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Галерея</button></li>
+					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Каталог</button></li>
+					<li class="header__menu-item"><button type="button"  class="header__menu-link button">События</button></li>
+					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Издания</button></li>
+					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Проекты</button></li>
+					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Контакты</button></li>
+					<li class="header__menu-item"><button type="button" class="header__login header__login--1024px button">Войти</button></li>
 				</ul>
 			 </nav>
-			 <button type="button" class="header__login">Войти</button>
+			 <button type="button" class="header__login button">Войти</button>
 		</div>
 	</div>
 	<div class="header__bottom">
@@ -42,7 +43,33 @@
 			<ul class="header__bottom-menu">
 				<li class="header__bottom-item js-header-dropdow">
 					<button class="header__bottom-link">Реализм</button>
-					<ul class="header__sub-menu js-header-sub-menu" id="scroll" data-simplebar>
+					<ul class="header__sub-menu header__sub-menu--reality js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
+						</li>
+					</ul>
+					<!-- <ul class="header__sub-menu js-header-sub-menu" data-simplebar>
 						<li class="header__sub-item">
 							<button  class="header__sub-link">Импрессионизм</button>
 						</li>
@@ -64,73 +91,121 @@
 						<li class="header__sub-item">
 							<button  class="header__sub-link">Футуризм</button>
 						</li>
-					</ul>
+					</ul> -->
 				</li>
 				<li class="header__bottom-item js-header-dropdow">
 					<button class="header__bottom-link">Импрессионизм</button>
-					<ul class="header__sub-menu js-header-sub-menu" data-simplebar>
+					<ul class="header__sub-menu header__sub-menu--impressionism js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Импрессионизм</button>
+							<a href="#" class="header__sub-link">Моне</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Постимпрессионизм</button>
+							<a href="#" class="header__sub-link">Сислей</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Авангард</button>
+							<a href="#" class="header__sub-link">Мане</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Футуризм</button>
+							<a href="#" class="header__sub-link">Ренуар</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
 						</li>
 					</ul>
 				</li>
 				<li class="header__bottom-item js-header-dropdow">
 					<button class="header__bottom-link">Постимпрессионизм</button>
-					<ul class="header__sub-menu js-header-sub-menu" data-simplebar>
+					<ul class="header__sub-menu header__sub-menu--postimpressionism js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
-							<button class="header__sub-link">Импрессионизм</button>
+							<a href="#" class="header__sub-link">Ван Гог</a>
 						</li>
 						<li class="header__sub-item">
-							<button class="header__sub-link">Постимпрессионизм</button>
+							<a href="#" class="header__sub-link">Сезанн</a>
 						</li>
 						<li class="header__sub-item">
-							<button class="header__sub-link">Авангард</button>
+							<a href="#" class="header__sub-link">Гоген</a>
 						</li>
 						<li class="header__sub-item">
-							<button class="header__sub-link">Футуризм</button>
+							<a href="#" class="header__sub-link">Сёра</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
 						</li>
 					</ul>
 				</li>
 				<li class="header__bottom-item js-header-dropdow">
-					<button class="header__bottom-link">Авангард </button>
-					<ul class="header__sub-menu js-header-sub-menu" data-simplebar>
+					<button class="header__bottom-link">Авангард</button>
+					<ul class="header__sub-menu header__sub-menu--avangard js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Импрессионизм</button>
+							<a href="#" class="header__sub-link">Кандинский</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Постимпрессионизм</button>
+							<a href="#" class="header__sub-link">Маринетти</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Авангард</button>
+							<a href="#" class="header__sub-link">Малевич</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Футуризм</button>
+							<a href="#" class="header__sub-link">Пикассо</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
 						</li>
 					</ul>
 				</li>
 				<li class="header__bottom-item js-header-dropdow">
 					<button class="header__bottom-link">Футуризм</button>
-					<ul class="header__sub-menu js-header-sub-menu" data-simplebar>
+					<ul class="header__sub-menu header__sub-menu--futurizm js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Импрессионизм</button>
+							<a href="#" class="header__sub-link">Карра</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Постимпрессионизм</button>
+							<a href="#" class="header__sub-link">Прателла</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Авангард</button>
+							<a href="#" class="header__sub-link">Северини</a>
 						</li>
 						<li class="header__sub-item">
-							<button  class="header__sub-link">Футуризм</button>
+							<a href="#" class="header__sub-link">Балла</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
 						</li>
 					</ul>
 				</li>

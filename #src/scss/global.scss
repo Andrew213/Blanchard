@@ -13,7 +13,7 @@
   $purpure-light:#9D5CD0;
   $purpure-link: #C283F3;
 
-  button{
+  .button{
     background-color: transparent;
     outline-color: $purpure-light;
     outline-color: #C283F3;
@@ -25,7 +25,9 @@
       color: #9D5CD0;
     }
   }
-
+.hide{
+  display: none !important;
+}
   .section-container{
     padding-top: 90px;
     padding-bottom: 80px;

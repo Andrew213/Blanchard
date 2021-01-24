@@ -34,5 +34,8 @@
 		"simplebar": "^5.3.0",
 		"transform-runtime": "0.0.0",
 		"webp-converter": "^2.2.3"
+	},
+	"dependencies": {
+		"focus-visible": "^5.2.0"
 	}
 }
