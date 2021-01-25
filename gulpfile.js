@@ -44,7 +44,7 @@ let path = {
 		js: [src_folder + "/js/app.js"],
 		css: src_folder + "/scss/style.scss",
 		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
-		fonts: src_folder + "/fonts/*.ttf"
+		fonts: src_folder + "/fonts/*.{ttf,woff,woff2}"
 	},
 	watch: {
 		html: src_folder + "/**/*.html",
