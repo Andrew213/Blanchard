@@ -1,17 +1,13 @@
 .hero{
     width: 100%;
-    // height: 700px;
     position: relative;
-    background-position: center;
-    background-size: cover;
     z-index: 2;
-    overflow-x: hidden;
-    // overflow: hidden;
-
+    height: 800px;
+    overflow: hidden;
     &__block {
         padding: 0 20px;
         position: absolute;
-        top: 140px;
+        top: 240px;
         left: -3px;
         color: #fff;
         line-height: 84px;
@@ -64,15 +60,14 @@
     &__slideshow,
     &__slideshow:after {
         width: 100%;
-        height: 800px;
         z-index: 0;
     }
 
     &__slideshow &__slideshow-item &__slideshow-img{
         width: 100%;
-        height: 700px;
         position: absolute;
-        top: 0;
+        top: 0px;
+        height: 800px;
         left: 0;
         background-size: cover;
         background-position: center;
@@ -132,20 +127,17 @@
 
 @media(max-width:1024px){
 .hero{
-height: 666px;
+height: 767px;
     &__text{
     max-width: 666px;
     margin-bottom: 127px;
     }
     &__block{
-        top: 110px;
+        top: 212px;
         left: 24px;
     }
     &__title{
         margin-bottom: 10px;
-    }
-    &__slideshow &__slideshow-item &__slideshow-img{
-        height: 666px;
     }
     &__slideshow &__slideshow-item:nth-child(1) &__slideshow-img{
         background-image: url(../img/1024/hero-img1-1024.jpg);
@@ -181,12 +173,13 @@ height: 666px;
         }
         &__title{
             text-align: center;
-            margin-bottom: 150px;
+            margin-bottom: 70px;
         }
         &__text{
         font-size: 20px;
         margin-left: 0;
         max-width: auto;
+        margin-bottom: 70px;
         text-align: center;
         }
         &__block{
@@ -245,7 +238,7 @@ height: 666px;
             text-align: center;
             }
             &__block{
-            top: 50px;
+            top: 115px;
             }
             &__title{
                 font-size: 32px;
@@ -286,9 +279,9 @@ height: 666px;
 
     @media(max-width:321px){
         .hero{
-        height: 310px;
+        height: 355px;
             &__block{
-                top: 32px;
+                top: 77px;
                 left: 3px;
             }
             &__inner{
@@ -308,12 +301,6 @@ height: 666px;
             max-width: 275px;
             }
 
-
-
-
-            &__slideshow &__slideshow-item &__slideshow-img{
-                height: 310px;
-            }
             &__slideshow &__slideshow-item:nth-child(1) &__slideshow-img{
                 background-image: url(../img/320/hero-img1-320.jpg);
             }

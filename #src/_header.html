@@ -2,7 +2,7 @@
 	<h1 class="visually-hidden">Художественная галлерея Blanchard</h1>
 	<div class="header__inner container">
 		<div class="header__top">
-			<button aria-label="Меню" type="button" class="header__burger button"><span></span></button>
+			<button aria-label="Кнопка открыть меню" type="button" class="header__burger button"><span></span></button>
 
 			<button class="header__logo button" >
 				<picture>
@@ -18,21 +18,21 @@
 				<img src="img/logo.png" alt="Логотип сайта">
 				 </picture>
 			</button>
-			<!-- <button class="header__logo--1024px" ><img src="img/logo--1024.png" alt="Логотип сайта"></button> -->
-			<button aria-label="Поиск по сайту" type="button" class="header__searchBtn--1024px"></button>
-			<div tabindex="1" class="header__search-wrapper--1024px">
-				<input type="search" placeholder="Поиск по сайту" class="header__search--1024px">
+			<button aria-label="Поиск по сайту" type="button" class="header__searchBtn-1024px"></button>
+			<div class="header__search-wrapper-1024px">
+				<input type="search" placeholder="Поиск по сайту" class="header__search-1024px">
+				<button class="header__search-btn" type="button" tabindex="0" aria-label="Закрыть строку поиска"></button>
 			</div>
 			<nav class="header__nav">
 				<ul class="header__menu">
-					<li class="header__menu-item"><button type="button"  class="header__menu-link button">О нас</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Галерея</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Каталог</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link button">События</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Издания</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Проекты</button></li>
-					<li class="header__menu-item"><button type="button"  class="header__menu-link button">Контакты</button></li>
-					<li class="header__menu-item"><button type="button" class="header__login header__login--1024px button">Войти</button></li>
+					<li class="header__menu-item"><button type="button" tabindex="-1"  class="header__menu-link button">О нас</button></li>
+					<li class="header__menu-item"><button type="button" tabindex="-1"  class="header__menu-link button">Галерея</button></li>
+					<li class="header__menu-item"><button type="button" tabindex="-1"  class="header__menu-link button">Каталог</button></li>
+					<li class="header__menu-item"><button type="button" tabindex="-1"  class="header__menu-link button">События</button></li>
+					<li class="header__menu-item"><button type="button" tabindex="-1"  class="header__menu-link button">Издания</button></li>
+					<li class="header__menu-item"><button type="button" tabindex="-1"  class="header__menu-link button">Проекты</button></li>
+					<li class="header__menu-item"><button type="button" tabindex="-1"  class="header__menu-link button">Контакты</button></li>
+					<li class="header__menu-item"><button type="button" tabindex="-1" class="header__login header__login-1024px button">Войти</button></li>
 				</ul>
 			 </nav>
 			 <button type="button" class="header__login button">Войти</button>
@@ -42,8 +42,8 @@
 		<div class="header__bottom-inner container">
 			<ul class="header__bottom-menu">
 				<li class="header__bottom-item js-header-dropdow">
-					<button class="header__bottom-link">Реализм</button>
-					<ul class="header__sub-menu header__sub-menu--reality js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
+					<button class="header__bottom-link" aria-label="Выпадающий список реализм">Реализм</button>
+					<ul class="header__sub-menu header__sub-menu--reality js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
 							<a href="#" class="header__sub-link">Тинторетто</a>
 						</li>
@@ -94,8 +94,8 @@
 					</ul> -->
 				</li>
 				<li class="header__bottom-item js-header-dropdow">
-					<button class="header__bottom-link">Импрессионизм</button>
-					<ul class="header__sub-menu header__sub-menu--impressionism js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
+					<button class="header__bottom-link" aria-label="Выпадающий список импрессионизм">Импрессионизм</button>
+					<ul class="header__sub-menu header__sub-menu--impressionism js-header-sub-menu" data-simplebar  data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
 							<a href="#" class="header__sub-link">Моне</a>
 						</li>
@@ -123,8 +123,8 @@
 					</ul>
 				</li>
 				<li class="header__bottom-item js-header-dropdow">
-					<button class="header__bottom-link">Постимпрессионизм</button>
-					<ul class="header__sub-menu header__sub-menu--postimpressionism js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
+					<button class="header__bottom-link" aria-label="Выпадающий список постимпрессионизм">Постимпрессионизм</button>
+					<ul class="header__sub-menu header__sub-menu--postimpressionism js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
 							<a href="#" class="header__sub-link">Ван Гог</a>
 						</li>
@@ -152,8 +152,8 @@
 					</ul>
 				</li>
 				<li class="header__bottom-item js-header-dropdow">
-					<button class="header__bottom-link">Авангард</button>
-					<ul class="header__sub-menu header__sub-menu--avangard js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
+					<button class="header__bottom-link" aria-label="Выпадающий список авангард">Авангард</button>
+					<ul class="header__sub-menu header__sub-menu--avangard js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
 							<a href="#" class="header__sub-link">Кандинский</a>
 						</li>
@@ -181,8 +181,8 @@
 					</ul>
 				</li>
 				<li class="header__bottom-item js-header-dropdow">
-					<button class="header__bottom-link">Футуризм</button>
-					<ul class="header__sub-menu header__sub-menu--futurizm js-header-sub-menu" data-simplebar id="scroll" data-simplebar-auto-hide="false">
+					<button class="header__bottom-link" aria-label="Выпадающий список футуризм">Футуризм</button>
+					<ul class="header__sub-menu header__sub-menu--futurizm js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">
 						<li class="header__sub-item">
 							<a href="#" class="header__sub-link">Карра</a>
 						</li>
@@ -210,9 +210,13 @@
 					</ul>
 				</li>
 			</ul> 
-				<div tabindex="1" class="header__search-wrapper">
+				<div tabindex="0" class="header__search-wrapper">
 					<input type="search" placeholder="Поиск по сайту" class="header__search">
 				</div>
 		</div>
+	</div>
+	<div class="header__search320">
+		<input tabindex="-1"  class="header__search-1024px header__search320-input" type="text">
+		<button class="header__search320-btn" type="button" tabindex="-1"  aria-label="Закрыть строку поиска"></button>
 	</div>
 </header>
