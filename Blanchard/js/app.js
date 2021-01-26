@@ -619,13 +619,17 @@ function removeFocusLogo(event){
     const headerNavEl = document.querySelector('.header__nav');
     if(burgerEl){
         if(headerNavEl.classList.contains('header__nav--active')){
-            headerLogoEl.setAttribute('tabindex', '-1');
-            document.querySelector('.header__searchBtn-1024px').setAttribute('tabindex', '-1');
-            document.querySelector('.hero__btn').setAttribute('tabindex', '-1');
-            [...document.querySelectorAll(".header__menu-link")].forEach(el => {
-                el.tabIndex = '0'
-            })
-            document.querySelector('.header__login-1024px').setAttribute('tabindex', '0');
+         
+                headerLogoEl.setAttribute('tabindex', '-1');
+                document.querySelector('.header__searchBtn-1024px').setAttribute('tabindex', '-1');
+                document.querySelector('.hero__btn').setAttribute('tabindex', '-1');
+                [...document.querySelectorAll(".header__menu-link")].forEach(el => {
+                    el.tabIndex = '0'
+                })
+                document.querySelector('.header__login-1024px').setAttribute('tabindex', '0');
+            
+                
+      
         }else{
            headerLogoEl.removeAttribute('tabindex', '-1');
         document.querySelector('.header__searchBtn-1024px').removeAttribute('tabindex', '-1') ;
@@ -636,13 +640,17 @@ function removeFocusLogo(event){
         document.querySelector('.header__login-1024px').setAttribute('tabindex', '-1');
         }
     }else{
-        headerLogoEl.removeAttribute('tabindex', '-1');
-        document.querySelector('.header__searchBtn-1024px').removeAttribute('tabindex', '-1');
-        document.querySelector('.hero__btn').removeAttribute('tabindex', '-1');
-        [...document.querySelectorAll(".header__menu-link")].forEach(el => {
-            el.tabIndex = '-1'
-        });
-        document.querySelector('.header__login-1024px').setAttribute('tabindex', '-1');
+
+        if(window.innerWidth <= 1024){
+            headerLogoEl.removeAttribute('tabindex', '-1');
+            document.querySelector('.header__searchBtn-1024px').removeAttribute('tabindex', '-1');
+            document.querySelector('.hero__btn').removeAttribute('tabindex', '-1');
+            [...document.querySelectorAll(".header__menu-link")].forEach(el => {
+                el.tabIndex = '-1'
+            });
+            document.querySelector('.header__login-1024px').setAttribute('tabindex', '-1');
+        }
+
     }
  
 }
