@@ -32,6 +32,7 @@
 		"gulp-webpcss": "^1.1.1",
 		"imagemin-webp": "latest",
 		"simplebar": "^5.3.0",
+		"swiper": "^6.4.8",
 		"transform-runtime": "0.0.0",
 		"webp-converter": "^2.2.3"
 	},

@@ -44,7 +44,8 @@ let path = {
 		js: [src_folder + "/js/app.js"],
 		css: src_folder + "/scss/style.scss",
 		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
-		fonts: src_folder + "/fonts/*.{ttf,woff,woff2}"
+		fonts: src_folder + "/fonts/*.{ttf,woff,woff2}",
+		libsCss: src_folder + "/scss/libs/*.css",
 	},
 	watch: {
 		html: src_folder + "/**/*.html",
@@ -105,7 +106,7 @@ function js() {
 		.pipe(plumber())
 		.pipe(fileinclude())
 		.pipe(gulp.dest(path.build.js))
-		.pipe(uglify(/* options */))
+		.pipe(uglify())
 		.pipe(
 			rename({
 				suffix: ".min",
@@ -119,7 +120,8 @@ function js() {
 gulp.task("script", function () {
 	return gulp
 	  .src([path.src.libs,
-		"node_modules/focus-visible/dist/focus-visible.min.js"
+		"node_modules/focus-visible/dist/focus-visible.min.js",
+		"node_modules/swiper/swiper-bundle.js",
 	])
 	  .pipe(concat("libs.min.js"))
 	  .pipe(uglify())
@@ -129,9 +131,10 @@ gulp.task("script", function () {
   
 gulp.task("style", function () {
 	return gulp
-	  .src([
+	  .src([path.src.libsCss,
 	  "node_modules/simplebar/dist/simplebar.min.css",
 	  "node_modules/animate.css/animate.min.css",
+	  "node_modules/swiper/swiper-bundle.css"
 	 ])
 	  .pipe(concat("libs.min.css"))
 	  .pipe(cssmin())
