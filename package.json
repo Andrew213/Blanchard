@@ -8,6 +8,7 @@
 	"devDependencies": {
 		"animate.css": "^4.1.1",
 		"browser-sync": "latest",
+		"choices.js": "^9.0.1",
 		"del": "latest",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
@@ -37,6 +38,7 @@
 		"webp-converter": "^2.2.3"
 	},
 	"dependencies": {
+		"focus-manager": "^0.4.1",
 		"focus-visible": "^5.2.0"
 	}
 }

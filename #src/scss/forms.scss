@@ -254,7 +254,7 @@ textarea.input {
 		}
 		&:after {
 			content: "";
-			transition: all 0.3s ease 0s;
+			transition: 0.3s ease 0s;
 			transform: scale(0);
 			width: 10px;
 			height: 10px;
@@ -334,7 +334,7 @@ textarea.input {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transition: all 0.3s ease 0s;
+			transition: 0.3s ease 0s;
 			margin: 0px 0px 0px -4.5px;
 			background-color: #a6a6a6;
 			width: 9px;

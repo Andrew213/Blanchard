@@ -120,8 +120,10 @@ function js() {
 gulp.task("script", function () {
 	return gulp
 	  .src([path.src.libs,
+		"node_modules/choices.js/public/assets/scripts/choices.min.js",
 		"node_modules/focus-visible/dist/focus-visible.min.js",
 		"node_modules/swiper/swiper-bundle.js",
+		"node_modules/focus-manager/focusManager.min.js",
 	])
 	  .pipe(concat("libs.min.js"))
 	  .pipe(uglify())
@@ -132,6 +134,7 @@ gulp.task("script", function () {
 gulp.task("style", function () {
 	return gulp
 	  .src([path.src.libsCss,
+		"node_modules/choices.js/public/assets/styles/choices.min.css",
 	  "node_modules/simplebar/dist/simplebar.min.css",
 	  "node_modules/animate.css/animate.min.css",
 	  "node_modules/swiper/swiper-bundle.css"

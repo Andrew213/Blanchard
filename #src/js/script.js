@@ -215,6 +215,8 @@ function removeFocusLogo(event){
 
 // ##############################################################################
 
+
+
 const select1 = new CustomSelect('#select-1');
 
 const gallerySelectEl = getDomEl('.gallery__select');
@@ -314,7 +316,7 @@ function activatePopup(event){
             //  popup_link.getAttribute('popupName')
         popupsAll.forEach(el => {
             if(el.getAttribute('data-name') === popup_link.getAttribute('data-popupName')){
-            popup_open(el)
+            popup_open(el);
             }
         })
     } else if(popup_close_icon){
@@ -336,6 +338,7 @@ function activatePopup(event){
         			body_lock_add(500);
         		}
         		item.classList.add('_active');
+                focusManager.capture(item)
         	}
         }
 
@@ -348,11 +351,12 @@ function activatePopup(event){
 	}
 }
 
-
-
-
-
-
-
-
 addClickListener();
+
+const element = document.querySelector('.gallery__select');
+const choices = new Choices(element, {
+   searchEnabled: false,
+   itemSelectText: '',
+});
+
+// console.log(document.querySelectorAll('*:not(.gallery-popup)'))

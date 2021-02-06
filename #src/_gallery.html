@@ -1,11 +1,19 @@
 <section class="gallery">
     <div class="gallery__inner container section-container">
         <div class="gallery__info">
-            <div class="gallery__title">Галерея</div>
+            <h2 class="gallery__title">Галерея</h2>
             <div class="gallery__select-wrapper">
                 <div class="gallery__select-title">Фильтровать по:</div>
 
-                <div class="gallery__select select" id="select-1">
+                 <div class="gallery__select-wrapper select" id="select-1">
+                        <select class="gallery__select">
+                            <option value="Автор" class="gallery__select-option">Автор</option>
+                            <option value="Направление" class="gallery__select-option">Направление</option>
+                            <option value="Техника" class="gallery__select-option">Техника</option>
+                        </select>
+                    </div>
+
+                <!-- <div class="gallery__select select" id="select-1">
                     <button aria-label="Выпадающий список из 2-х эелементов" type="button" class="gallery__select-trigger select__trigger" data-select="trigger">
                         Автор
                     </button>
@@ -13,11 +21,11 @@
                     <div class="gallery__select-dropdown select__dropdown">
                         <ul class="gallery__select-items select__items">
                             <li class="gallery__select-item select__item select__item_selected" data-select="item">Автор</li>
-                            <li class="gallery__select-item select__item" data-select="item">Направление</li>
-                            <li class="gallery__select-item select__item" data-select="item">Техника</li>
+                            <li class="gallery__select-item select__item" data-select="item" tabindex="0">Направление</li>
+                            <li class="gallery__select-item select__item" data-select="item" tabindex="0">Техника</li>
                         </ul>
                     </div>
-                    </div>
+                    </div> -->
             </div>
 
             <p class="gallery__text">

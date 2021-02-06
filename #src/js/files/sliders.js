@@ -1,3 +1,5 @@
+
+
 //BildSlider
 // let sliders = document.querySelectorAll('.gallery__slider');
 // // if (sliders) {
@@ -68,38 +70,13 @@
 // function sliders_bild_callback(params) { }
 
 let slider_about = new Swiper('.gallery__slider', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
-	// observer: true,
-	// observeParents: true,
-	// slidesPerView: 6,
-	// // slidesPerView: 'auto',
+
 	slidesPerGroup: 3,
 	// freeMode: true,
 	slidesPerView: 3,
 	slidesPerColumn: 2,
 	spaceBetween: 50,
-	// autoHeight: true,
-	// speed: 800,
-	// spaceBetween: 25,
-	// fadeEffect: { // Add this
-	// 	crossFade: true,
-	//   },
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
-	//pagination: {
-	//	el: '.slider-quality__pagging',
-	//	clickable: true,
-	//},
+	updateOnWindowResize: true,
 	// Arrows
 	navigation: {
 		nextEl: '.gallery__arrow--next',
@@ -149,38 +126,37 @@ let slider_about = new Swiper('.gallery__slider', {
 },
 
 
-755:{
+500:{
 
-	spaceBetween: 34, 	
-	slidesPerView: 2,
-	slidesPerGroup: 2,
-	
-	// centeredSlides: true,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	slidesPerColumn: 1,
+	centeredSlides: true,
 },
 
-768:{
+730:{
 
 				spaceBetween: 34, 	
 				slidesPerView: 2,
 				slidesPerGroup: 2,
-				
-				// centeredSlides: true,
+
+
 },
 
 	
 		
 		991: {
-			
+
 			spaceBetween: 34,
 				slidesPerView: 2,
 				slidesPerGroup: 2,
 		},
 		1500: {
 			spaceBetween: 50,
-			slidesPerView: 'auto',
 			slidesPerGroup: 3,
-		}
+			slidesPerView: 3,
 
+		}
 	},
 	
 	/*
