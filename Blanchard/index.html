@@ -1,1 +1,508 @@
-<!DOCTYPE html><html lang="ru">	 <head>	<title>Blanchard</title>	<meta charset="UTF-8">	<meta name="format-detection" content="telephone=no">	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">	<link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>	<link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>	<link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>	<link rel="stylesheet" href="css/libs.min.css">	<link rel="stylesheet" href="css/style.min.css">	<!-- <meta name="robots" content="noindex, nofollow"> -->	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>	<script defer src="js/libs.min.js"></script>	<script defer src="js/app.js"></script></head>	<body class="body">		<div class="wrapper">			<header class="header">	<h1 class="visually-hidden">Художественная галлерея Blanchard</h1>	<div class="header__inner container">		<div class="header__top">			<button aria-label="Кнопка открыть меню" type="button" class="header__burger button"><span></span></button>			<button class="header__logo button" >				<picture>					<source 					srcset="img/logo--700px.png" type="image/webp"					media="(max-width: 700px)"					>					<source 					srcset="img/logo--1024.png" type="image/webp"					media="(min-width: 700px) and (max-width: 1024px)"					>	 				<img src="img/logo.png" alt="Логотип сайта">				 </picture>			</button>			<button aria-label="Поиск по сайту" type="button" class="header__searchBtn-1024px"></button>			<div class="header__search-wrapper-1024px">				<input type="search" placeholder="Поиск по сайту" class="header__search-1024px">				<button class="header__search-btn" type="button" tabindex="0" aria-label="Закрыть строку поиска"></button>			</div>			<nav class="header__nav">				<ul class="header__menu">					<li class="header__menu-item"><a href="#"  class="header__menu-link button">О нас</a></li>					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Галерея</a></li>					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Каталог</a></li>					<li class="header__menu-item"><a href="#"  class="header__menu-link button">События</a></li>					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Издания</a></li>					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Проекты</a></li>					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Контакты</a></li>					<li class="header__menu-item"><a href="#" class="header__login header__login-1024px button">Войти</a></li>				</ul>			 </nav>			 <button type="button" class="header__login button">Войти</button>		</div>	</div>	<div class="header__bottom">		<div class="header__bottom-inner container">			<ul class="header__bottom-menu">				<li class="header__bottom-item js-header-dropdow">					<button class="header__bottom-link" aria-label="Выпадающий список реализм">Реализм</button>					<ul class="header__sub-menu header__sub-menu--reality js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">						<li class="header__sub-item">							<a href="#" class="header__sub-link">Тинторетто</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Фридрих</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Леонардо</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Верроккьо</a>						</li>								<li class="header__sub-item">							<a href="#" class="header__sub-link">Тинторетто</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Фридрих</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Леонардо</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Верроккьо</a>						</li>					</ul>					<!-- <ul class="header__sub-menu js-header-sub-menu" data-simplebar>						<li class="header__sub-item">							<button  class="header__sub-link">Импрессионизм</button>						</li>						<li class="header__sub-item">							<button  class="header__sub-link">Постимпрессионизм</button>						</li>						<li class="header__sub-item">							<button  class="header__sub-link">Авангард</button>						</li>						<li class="header__sub-item">							<button  class="header__sub-link">Футуризм</button>						</li>						<li class="header__sub-item">							<button  class="header__sub-link">Футуризм</button>						</li>						<li class="header__sub-item">							<button  class="header__sub-link">Футуризм</button>						</li>						<li class="header__sub-item">							<button  class="header__sub-link">Футуризм</button>						</li>					</ul> -->				</li>				<li class="header__bottom-item js-header-dropdow">					<button class="header__bottom-link" aria-label="Выпадающий список импрессионизм">Импрессионизм</button>					<ul class="header__sub-menu header__sub-menu--impressionism js-header-sub-menu" data-simplebar  data-simplebar-auto-hide="false">						<li class="header__sub-item">							<a href="#" class="header__sub-link">Моне</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Сислей</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Мане</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Ренуар</a>						</li>								<li class="header__sub-item">							<a href="#" class="header__sub-link">Тинторетто</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Фридрих</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Леонардо</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Верроккьо</a>						</li>					</ul>				</li>				<li class="header__bottom-item js-header-dropdow">					<button class="header__bottom-link" aria-label="Выпадающий список постимпрессионизм">Постимпрессионизм</button>					<ul class="header__sub-menu header__sub-menu--postimpressionism js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">						<li class="header__sub-item">							<a href="#" class="header__sub-link">Ван Гог</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Сезанн</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Гоген</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Сёра</a>						</li>								<li class="header__sub-item">							<a href="#" class="header__sub-link">Тинторетто</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Фридрих</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Леонардо</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Верроккьо</a>						</li>					</ul>				</li>				<li class="header__bottom-item js-header-dropdow">					<button class="header__bottom-link" aria-label="Выпадающий список авангард">Авангард</button>					<ul class="header__sub-menu header__sub-menu--avangard js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">						<li class="header__sub-item">							<a href="#" class="header__sub-link">Кандинский</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Маринетти</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Малевич</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Пикассо</a>						</li>								<li class="header__sub-item">							<a href="#" class="header__sub-link">Тинторетто</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Фридрих</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Леонардо</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Верроккьо</a>						</li>					</ul>				</li>				<li class="header__bottom-item js-header-dropdow">					<button class="header__bottom-link" aria-label="Выпадающий список футуризм">Футуризм</button>					<ul class="header__sub-menu header__sub-menu--futurizm js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">						<li class="header__sub-item">							<a href="#" class="header__sub-link">Карра</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Прателла</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Северини</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Балла</a>						</li>								<li class="header__sub-item">							<a href="#" class="header__sub-link">Тинторетто</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Фридрих</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Леонардо</a>						</li>						<li class="header__sub-item">							<a href="#" class="header__sub-link">Верроккьо</a>						</li>					</ul>				</li>			</ul> 				<div tabindex="0" class="header__search-wrapper">					<input type="search" placeholder="Поиск по сайту" class="header__search">				</div>		</div>	</div>	<div class="header__search320">		<input tabindex="-1"  class="header__search-1024px header__search320-input" type="text">		<button class="header__search320-btn" type="button" tabindex="-1"  aria-label="Закрыть строку поиска"></button>	</div></header>			<main class="page">				<section class="hero">    <div class="hero__inner container">        <div class="hero__block">            <h2 class="hero__title">Прикоснитесь к прекрасному</h2>            <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>            <a href="#" class="hero__btn">Подписаться на рассылку</a>        </div>    </div>    <ul class="hero__slideshow">        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>    </ul></section>				<section class="about">    <div class="about__inner container section-container">        <h2 class="about__title">О нас</h2>        <p class="about__text">            Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.        </p>    </div></section>				<section class="gallery">    <div class="gallery__inner container section-container">        <div class="gallery__info">            <h2 class="gallery__title">Галерея</h2>            <div class="gallery__select-wrapper">                <div class="gallery__select-title">Фильтровать по:</div>                 <div class="gallery__select-wrapper select" id="select-1">                        <select class="gallery__select">                            <option value="Автор" class="gallery__select-option">Автор</option>                            <option value="Направление" class="gallery__select-option">Направление</option>                            <option value="Техника" class="gallery__select-option">Техника</option>                        </select>                    </div>                <!-- <div class="gallery__select select" id="select-1">                    <button aria-label="Выпадающий список из 2-х эелементов" type="button" class="gallery__select-trigger select__trigger" data-select="trigger">                        Автор                    </button>                    <div class="gallery__select-dropdown select__dropdown">                        <ul class="gallery__select-items select__items">                            <li class="gallery__select-item select__item select__item_selected" data-select="item">Автор</li>                            <li class="gallery__select-item select__item" data-select="item" tabindex="0">Направление</li>                            <li class="gallery__select-item select__item" data-select="item" tabindex="0">Техника</li>                        </ul>                    </div>                    </div> -->            </div>            <p class="gallery__text">                Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__text-link" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией.             </p>        </div>        <div class="gallery__slider swiper-container">            <div class="gallery__slider-control">                <button type="button" class="gallery__arrow gallery__arrow--prev"></button>                <div class="gallery__slider-fraction"></div>                <button type="button" class="gallery__arrow gallery__arrow--next"></button>            </div>            <div class="gallery__slider-slides swiper-wrapper">                               <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName='gallery-1-1' class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-1/slide-1.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-1.jpg" alt="Красивая картина, произведение искусства"></picture></button>                <!-- <div class="gallery__popup popup" name='gallery-1-1'>                    <div class="gallery__popup-content popup__content">                        <div class="gallery__popup-body popup__body">                            <picture><source srcset="img/1920/gallery/slide-1/slide-1.webp" type="image/webp"><img class="gallery__popup-img" src="img/1920/gallery/slide-1/slide-1.jpg" alt="Та самая красива картина"></picture>                            <figcaption class="gallery__popup-info">                                <strong class="gallery__popup-title">Казимир Малевич</strong>                                <p class="gallery__popup-subtitle">"Женщина с граблями"</p>                                <span class="gallery__popup-date">1931-1932</span>                                <p class="gallery__popup-text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?                                    Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?                                    Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.                                    Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.                                    Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.                                </p>                            </figcaption>                            <button aria-label="закрыть окно с картиной" class="gallery__popup-close popup__close"></button>                        </div>                    </div>                </div>   -->                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-1/slide-2.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-2.jpg" alt="Красивая картина, произведение искусства"></picture></button>                  <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-1/slide-5.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-5.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-1/slide-3.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-3.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-1/slide-6.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-6.jpg" alt="Красивая картина, произведение искусства"></picture></button>                 <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-1/slide-4.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-4.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-1" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-2/slide-1.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-1.jpg" alt="Красивая картина, произведение искусства"></picture></button>                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-2/slide-4.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-4.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-2/slide-2.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-2.jpg" alt="Красивая картина, произведение искусства"></picture></button>                  <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-2/slide-5.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-5.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-2/slide-3.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-3.jpg" alt="Красивая картина, произведение искусства"></picture></button>                       <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-2/slide-6.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-6.jpg" alt="Красивая картина, произведение искусства"></picture></button>                                               <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-1" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-3/slide-1.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-1.jpg" alt="Красивая картина, произведение искусства"></picture></button>                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-3/slide-4.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-4.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-3/slide-2.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-2.jpg" alt="Красивая картина, произведение искусства"></picture></button>                  <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-3/slide-5.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-5.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-3/slide-3.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-3.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-3/slide-6.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-6.jpg" alt="Красивая картина, произведение искусства"></picture></button>                                                          <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-1" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-4/slide-1.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-1.jpg" alt="Красивая картина, произведение искусства"></picture></button>                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-4/slide-4.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-4.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-4/slide-2.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-2.jpg" alt="Красивая картина, произведение искусства"></picture></button>                  <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-4/slide-5.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-5.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-4/slide-3.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-3.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-4/slide-6.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-6.jpg" alt="Красивая картина, произведение искусства"></picture></button>                                                         <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-1" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-5/slide-1.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-1.jpg" alt="Красивая картина, произведение искусства"></picture></button>                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-5/slide-4.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-4.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-5/slide-2.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-2.jpg" alt="Красивая картина, произведение искусства"></picture></button>                  <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-5/slide-5.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-5.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-5/slide-3.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-3.jpg" alt="Красивая картина, произведение искусства"></picture></button>                   <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><picture><source srcset="img/1920/gallery/slide-5/slide-6.webp" type="image/webp"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-6.jpg" alt="Красивая картина, произведение искусства"></picture></button>             </div>        </div>     </div></section>			</main>			<footer class="footer">	<div class="footer__content _container">	</div></footer>		</div>		<div class="gallery-popup popup" data-name='gallery-1-1'>	<div class="gallery-popup__content popup__content">		<div class="gallery-popup__body popup__body">			<picture><source srcset="img/girl-760px.webp" type="image/webp"><img class="gallery-popup__img" src="img/girl-760px.jpg" alt="Та самая красива картина"></picture>			<div class="gallery-popup__info">				<strong class="gallery-popup__title">Казимир Малевич</strong>				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>				<span class="gallery-popup__date">1931-1932</span>				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.				</p>			</div>			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>		</div>	</div></div>   <div class="gallery-popup popup popup_gallery-1-2">	<div class="gallery-popup__content popup__content">		<div class="gallery-popup__body popup__body">			<picture><source srcset="img/girl.webp" type="image/webp"><img class="gallery-popup__img" src="img/girl.jpg" alt="Та самая красива картина"></picture>			<div class="gallery-popup__info">				<strong class="gallery-popup__title">Казимир Малевич</strong>				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>				<span class="gallery-popup__date">1931-1932</span>				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.				</p>			</div>			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>		</div>	</div></div>  <div class="gallery-popup popup popup_gallery-1-3" data-name='gallery-1-2'>	<div class="gallery-popup__content popup__content">		<div class="gallery-popup__body popup__body">			<picture><source srcset="img/1920/gallery/slide-1/slide-3.webp" type="image/webp"><img class="gallery-popup__img" src="img/1920/gallery/slide-1/slide-3.jpg" alt="Та самая красива картина"></picture>			<div class="gallery-popup__info">				<strong class="gallery-popup__title">Казимир Малевич</strong>				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>				<span class="gallery-popup__date">1931-1932</span>				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.				</p>			</div>			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>		</div>	</div></div>  <div class="gallery-popup popup popup_gallery-1-4" data-name='gallery-1-3'>	<div class="gallery-popup__content popup__content">		<div class="gallery-popup__body popup__body">			<picture><source srcset="img/1920/gallery/slide-1/slide-4.webp" type="image/webp"><img class="gallery-popup__img" src="img/1920/gallery/slide-1/slide-4.jpg" alt="Та самая красива картина"></picture>			<div class="gallery-popup__info">				<strong class="gallery-popup__title">Казимир Малевич</strong>				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>				<span class="gallery-popup__date">1931-1932</span>				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.				</p>			</div>			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>		</div>	</div></div>  <div class="gallery-popup popup popup_gallery-1-5" data-name='gallery-1-4'>	<div class="gallery-popup__content popup__content">		<div class="gallery-popup__body popup__body">			<picture><source srcset="img/1920/gallery/slide-1/slide-5.webp" type="image/webp"><img class="gallery-popup__img" src="img/1920/gallery/slide-1/slide-5.jpg" alt="Та самая красива картина"></picture>			<div class="gallery-popup__info">				<strong class="gallery-popup__title">Казимир Малевич</strong>				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>				<span class="gallery-popup__date">1931-1932</span>				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.				</p>			</div>			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>		</div>	</div></div>  <div class="gallery-popup popup popup_gallery-1-6" data-name='gallery-1-5'>	<div class="gallery-popup__content popup__content">		<div class="gallery-popup__body popup__body">			<picture><source srcset="img/1920/gallery/slide-1/slide-6.webp" type="image/webp"><img class="gallery-popup__img" src="img/1920/gallery/slide-1/slide-6.jpg" alt="Та самая красива картина"></picture>			<div class="gallery-popup__info">				<strong class="gallery-popup__title">Казимир Малевич</strong>				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>				<span class="gallery-popup__date">1931-1932</span>				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.				</p>			</div>			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>		</div>	</div></div>    	</body></html>
+
+<!DOCTYPE html>
+<html lang="ru">
+	 <head>
+	<title>Blanchard</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	<script defer src="js/libs.min.js"></script>
+	<script defer src="js/app.js"></script>
+</head>
+	<body class="body">
+		<div class="wrapper">
+			<header class="header">
+	<h1 class="visually-hidden">Художественная галлерея Blanchard</h1>
+	<div class="header__inner container">
+		<div class="header__top">
+			<button aria-label="Кнопка открыть меню" type="button" class="header__burger button"><span></span></button>
+
+			<button class="header__logo button" >
+				<picture>
+					<source 
+					srcset="img/logo--700px.png" type="image/webp"
+					media="(max-width: 700px)"
+					>
+					<source 
+					srcset="img/logo--1024.png" type="image/webp"
+					media="(min-width: 700px) and (max-width: 1024px)"
+					>
+	 
+				<img src="img/logo.png" alt="Логотип сайта">
+				 </picture>
+			</button>
+			<button aria-label="Поиск по сайту" type="button" class="header__searchBtn-1024px"></button>
+			<div class="header__search-wrapper-1024px">
+				<input type="search" placeholder="Поиск по сайту" class="header__search-1024px">
+				<button class="header__search-btn" type="button" tabindex="0" aria-label="Закрыть строку поиска"></button>
+			</div>
+			<nav class="header__nav">
+				<ul class="header__menu">
+					<li class="header__menu-item"><a href="#"  class="header__menu-link button">О нас</a></li>
+					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Галерея</a></li>
+					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Каталог</a></li>
+					<li class="header__menu-item"><a href="#"  class="header__menu-link button">События</a></li>
+					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Издания</a></li>
+					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Проекты</a></li>
+					<li class="header__menu-item"><a href="#"  class="header__menu-link button">Контакты</a></li>
+					<li class="header__menu-item"><a href="#" class="header__login header__login-1024px button">Войти</a></li>
+				</ul>
+			 </nav>
+			 <button type="button" class="header__login button">Войти</button>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="header__bottom-inner container">
+			<ul class="header__bottom-menu">
+				<li class="header__bottom-item js-header-dropdow">
+					<button class="header__bottom-link" aria-label="Выпадающий список реализм">Реализм</button>
+					<ul class="header__sub-menu header__sub-menu--reality js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
+						</li>
+					</ul>
+					<!-- <ul class="header__sub-menu js-header-sub-menu" data-simplebar>
+						<li class="header__sub-item">
+							<button  class="header__sub-link">Импрессионизм</button>
+						</li>
+						<li class="header__sub-item">
+							<button  class="header__sub-link">Постимпрессионизм</button>
+						</li>
+						<li class="header__sub-item">
+							<button  class="header__sub-link">Авангард</button>
+						</li>
+						<li class="header__sub-item">
+							<button  class="header__sub-link">Футуризм</button>
+						</li>
+						<li class="header__sub-item">
+							<button  class="header__sub-link">Футуризм</button>
+						</li>
+						<li class="header__sub-item">
+							<button  class="header__sub-link">Футуризм</button>
+						</li>
+						<li class="header__sub-item">
+							<button  class="header__sub-link">Футуризм</button>
+						</li>
+					</ul> -->
+				</li>
+				<li class="header__bottom-item js-header-dropdow">
+					<button class="header__bottom-link" aria-label="Выпадающий список импрессионизм">Импрессионизм</button>
+					<ul class="header__sub-menu header__sub-menu--impressionism js-header-sub-menu" data-simplebar  data-simplebar-auto-hide="false">
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Моне</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Сислей</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Мане</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Ренуар</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
+						</li>
+					</ul>
+				</li>
+				<li class="header__bottom-item js-header-dropdow">
+					<button class="header__bottom-link" aria-label="Выпадающий список постимпрессионизм">Постимпрессионизм</button>
+					<ul class="header__sub-menu header__sub-menu--postimpressionism js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Ван Гог</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Сезанн</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Гоген</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Сёра</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
+						</li>
+					</ul>
+				</li>
+				<li class="header__bottom-item js-header-dropdow">
+					<button class="header__bottom-link" aria-label="Выпадающий список авангард">Авангард</button>
+					<ul class="header__sub-menu header__sub-menu--avangard js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Кандинский</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Маринетти</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Малевич</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Пикассо</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
+						</li>
+					</ul>
+				</li>
+				<li class="header__bottom-item js-header-dropdow">
+					<button class="header__bottom-link" aria-label="Выпадающий список футуризм">Футуризм</button>
+					<ul class="header__sub-menu header__sub-menu--futurizm js-header-sub-menu" data-simplebar data-simplebar-auto-hide="false">
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Карра</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Прателла</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Северини</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Балла</a>
+						</li>
+								<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Тинторетто</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Фридрих</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Леонардо</a>
+						</li>
+						<li class="header__sub-item">
+							<a href="#" class="header__sub-link">Верроккьо</a>
+						</li>
+					</ul>
+				</li>
+			</ul> 
+				<div tabindex="0" class="header__search-wrapper">
+					<input type="search" placeholder="Поиск по сайту" class="header__search">
+				</div>
+		</div>
+	</div>
+	<div class="header__search320">
+		<input tabindex="-1"  class="header__search-1024px header__search320-input" type="text">
+		<button class="header__search320-btn" type="button" tabindex="-1"  aria-label="Закрыть строку поиска"></button>
+	</div>
+</header>
+
+			<main class="page">
+				<section class="hero">
+    <div class="hero__inner container">
+        <div class="hero__block">
+            <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
+            <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+            <a href="#" class="hero__btn">Подписаться на рассылку</a>
+        </div>
+    </div>
+    <ul class="hero__slideshow">
+        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>
+        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>
+        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>
+        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>
+        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>
+        <li class="hero__slideshow-item"><span class="hero__slideshow-img"></span></li>
+    </ul>
+</section>
+				<section class="about">
+    <div class="about__inner container section-container">
+        <h2 class="about__title">О нас</h2>
+        <p class="about__text">
+            Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
+        </p>
+    </div>
+</section>
+				<section class="gallery">
+    <div class="gallery__inner container section-container">
+        <div class="gallery__info">
+            <h2 class="gallery__title">Галерея</h2>
+            <div class="gallery__select-wrapper">
+                <div class="gallery__select-title">Фильтровать по:</div>
+
+                 <div class="gallery__select-wrapper select" id="select-1">
+                        <select class="gallery__select">
+                            <option value="Автор" class="gallery__select-option">Автор</option>
+                            <option value="Направление" class="gallery__select-option">Направление</option>
+                            <option value="Техника" class="gallery__select-option">Техника</option>
+                        </select>
+                    </div>
+
+                <!-- <div class="gallery__select select" id="select-1">
+                    <button aria-label="Выпадающий список из 2-х эелементов" type="button" class="gallery__select-trigger select__trigger" data-select="trigger">
+                        Автор
+                    </button>
+
+                    <div class="gallery__select-dropdown select__dropdown">
+                        <ul class="gallery__select-items select__items">
+                            <li class="gallery__select-item select__item select__item_selected" data-select="item">Автор</li>
+                            <li class="gallery__select-item select__item" data-select="item" tabindex="0">Направление</li>
+                            <li class="gallery__select-item select__item" data-select="item" tabindex="0">Техника</li>
+                        </ul>
+                    </div>
+                    </div> -->
+            </div>
+
+            <p class="gallery__text">
+                Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__text-link" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
+            </p>
+        </div>
+
+        <div class="gallery__slider swiper-container">
+            <div class="gallery__slider-control">
+                <button type="button" class="gallery__arrow gallery__arrow--prev"></button>
+                <div class="gallery__slider-fraction"></div>
+                <button type="button" class="gallery__arrow gallery__arrow--next"></button>
+            </div>
+            <div class="gallery__slider-slides swiper-wrapper">
+               
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName='gallery-1-1' class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-1.jpg" alt="Красивая картина, произведение искусства"></button>
+                <!-- <div class="gallery__popup popup" name='gallery-1-1'>
+                    <div class="gallery__popup-content popup__content">
+                        <div class="gallery__popup-body popup__body">
+                            <img class="gallery__popup-img" src="img/1920/gallery/slide-1/slide-1.jpg" alt="Та самая красива картина">
+                            <figcaption class="gallery__popup-info">
+                                <strong class="gallery__popup-title">Казимир Малевич</strong>
+                                <p class="gallery__popup-subtitle">"Женщина с граблями"</p>
+                                <span class="gallery__popup-date">1931-1932</span>
+                                <p class="gallery__popup-text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?
+                                    Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?
+                                    Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.
+                                    Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.
+                                    Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.
+                                </p>
+                            </figcaption>
+                            <button aria-label="закрыть окно с картиной" class="gallery__popup-close popup__close"></button>
+                        </div>
+                    </div>
+                </div>   -->
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-2.jpg" alt="Красивая картина, произведение искусства"></button>  
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-5.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-3.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-6.jpg" alt="Красивая картина, произведение искусства"></button> 
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-1/slide-4.jpg" alt="Красивая картина, произведение искусства"></button>   
+
+
+
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-1" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-1.jpg" alt="Красивая картина, произведение искусства"></button>
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-4.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-2.jpg" alt="Красивая картина, произведение искусства"></button>  
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-5.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-3.jpg" alt="Красивая картина, произведение искусства"></button>       
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-2/slide-6.jpg" alt="Красивая картина, произведение искусства"></button>               
+                
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-1" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-1.jpg" alt="Красивая картина, произведение искусства"></button>
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-4.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-2.jpg" alt="Красивая картина, произведение искусства"></button>  
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-5.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-3.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-3/slide-6.jpg" alt="Красивая картина, произведение искусства"></button>                          
+                
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-1" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-1.jpg" alt="Красивая картина, произведение искусства"></button>
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-4.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-2.jpg" alt="Красивая картина, произведение искусства"></button>  
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-5.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-3.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-4/slide-6.jpg" alt="Красивая картина, произведение искусства"></button>                         
+                
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-1" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-1.jpg" alt="Красивая картина, произведение искусства"></button>
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-4" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-4.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-2" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-2.jpg" alt="Красивая картина, произведение искусства"></button>  
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-5" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-5.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-3" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-3.jpg" alt="Красивая картина, произведение искусства"></button>   
+                <button type="button" aria-label="нажмите, чтобы узнать про картину" data-popupName="gallery-1-6" class="gallery__slide-btn gallery__slider-slide swiper-slide  _popup-link"><img class="gallery__img" src="img/1920/gallery/slide-5/slide-6.jpg" alt="Красивая картина, произведение искусства"></button> 
+            </div>
+        </div> 
+    </div>
+</section>
+			</main>
+			<footer class="footer">
+	<div class="footer__content _container">
+
+	</div>
+</footer>
+		</div>
+		<div class="gallery-popup popup" data-name='gallery-1-1'>
+	<div class="gallery-popup__content popup__content">
+		<div class="gallery-popup__body popup__body">
+			<img class="gallery-popup__img" src="img/girl-760px.jpg" alt="Та самая красива картина">
+			<div class="gallery-popup__info">
+				<strong class="gallery-popup__title">Казимир Малевич</strong>
+				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>
+				<span class="gallery-popup__date">1931-1932</span>
+				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?
+					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?
+					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.
+					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.
+					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.
+				</p>
+			</div>
+			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>
+		</div>
+	</div>
+</div>  
+ <div class="gallery-popup popup popup_gallery-1-2">
+	<div class="gallery-popup__content popup__content">
+		<div class="gallery-popup__body popup__body">
+			<img class="gallery-popup__img" src="img/girl.jpg" alt="Та самая красива картина">
+			<div class="gallery-popup__info">
+				<strong class="gallery-popup__title">Казимир Малевич</strong>
+				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>
+				<span class="gallery-popup__date">1931-1932</span>
+				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?
+					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?
+					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.
+					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.
+					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.
+				</p>
+			</div>
+			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>
+		</div>
+	</div>
+</div>  
+<div class="gallery-popup popup popup_gallery-1-3" data-name='gallery-1-2'>
+	<div class="gallery-popup__content popup__content">
+		<div class="gallery-popup__body popup__body">
+			<img class="gallery-popup__img" src="img/1920/gallery/slide-1/slide-3.jpg" alt="Та самая красива картина">
+			<div class="gallery-popup__info">
+				<strong class="gallery-popup__title">Казимир Малевич</strong>
+				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>
+				<span class="gallery-popup__date">1931-1932</span>
+				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?
+					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?
+					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.
+					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.
+					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.
+				</p>
+			</div>
+			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>
+		</div>
+	</div>
+</div>  
+<div class="gallery-popup popup popup_gallery-1-4" data-name='gallery-1-3'>
+	<div class="gallery-popup__content popup__content">
+		<div class="gallery-popup__body popup__body">
+			<img class="gallery-popup__img" src="img/1920/gallery/slide-1/slide-4.jpg" alt="Та самая красива картина">
+			<div class="gallery-popup__info">
+				<strong class="gallery-popup__title">Казимир Малевич</strong>
+				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>
+				<span class="gallery-popup__date">1931-1932</span>
+				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?
+					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?
+					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.
+					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.
+					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.
+				</p>
+			</div>
+			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>
+		</div>
+	</div>
+</div>  
+<div class="gallery-popup popup popup_gallery-1-5" data-name='gallery-1-4'>
+	<div class="gallery-popup__content popup__content">
+		<div class="gallery-popup__body popup__body">
+			<img class="gallery-popup__img" src="img/1920/gallery/slide-1/slide-5.jpg" alt="Та самая красива картина">
+			<div class="gallery-popup__info">
+				<strong class="gallery-popup__title">Казимир Малевич</strong>
+				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>
+				<span class="gallery-popup__date">1931-1932</span>
+				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?
+					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?
+					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.
+					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.
+					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.
+				</p>
+			</div>
+			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>
+		</div>
+	</div>
+</div>  
+<div class="gallery-popup popup popup_gallery-1-6" data-name='gallery-1-5'>
+	<div class="gallery-popup__content popup__content">
+		<div class="gallery-popup__body popup__body">
+			<img class="gallery-popup__img" src="img/1920/gallery/slide-1/slide-6.jpg" alt="Та самая красива картина">
+			<div class="gallery-popup__info">
+				<strong class="gallery-popup__title">Казимир Малевич</strong>
+				<p class="gallery-popup__subtitle">"Женщина с граблями"</p>
+				<span class="gallery-popup__date">1931-1932</span>
+				<p class="gallery-popup__text"  data-simplebar data-simplebar-auto-hide="true">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum accusamus deserunt laboriosam vel at quam temporibus asperiores! Maxime cupiditate porro, asperiores commodi numquam fugit repudiandae incidunt obcaecati voluptas cum?
+					Accusamus, magni amet esse deleniti sunt quas laborum at voluptate numquam non id iste eveniet ex optio tempora laudantium neque distinctio et, dignissimos ad. Error labore veniam delectus voluptatum nam?
+					Eum consequuntur ducimus cupiditate vero quas vel hic ipsa dolor perspiciatis enim, rerum tenetur! Eveniet eaque voluptate nam similique, blanditiis, quisquam cum perferendis quos excepturi sit aut mollitia animi? Alias.
+					Aperiam error aliquam cupiditate temporibus, similique ipsam voluptate accusamus quos repudiandae maiores. Amet natus, ratione laborum perferendis vero, deserunt mollitia molestiae eveniet enim itaque, explicabo molestias illo beatae dicta sed.
+					Labore eligendi ipsum quasi vero numquam sit nemo deleniti ullam. Placeat vel eaque ad officiis sit facilis vero, architecto alias hic tempore praesentium. Molestiae commodi quaerat corporis, possimus ducimus a.
+				</p>
+			</div>
+			<button aria-label="закрыть окно с картиной" class="gallery-popup__close popup__close"></button>
+		</div>
+	</div>
+</div>    
+
+
+	</body>
+</html>
