@@ -5,4 +5,3 @@
 @@include('files/sliders.js', {})
 @@include('files/custom_select.js', {})
 @@include('script.js', {})
-

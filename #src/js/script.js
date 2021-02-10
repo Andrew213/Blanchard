@@ -217,7 +217,7 @@ function removeFocusLogo(event){
 
 
 
-const select1 = new CustomSelect('#select-1');
+// const select1 = new CustomSelect('#select-1');
 
 const gallerySelectEl = getDomEl('.gallery__select');
 
