@@ -1479,35 +1479,24 @@ const slider_about = new Swiper('.gallery__slider', {
 		el: '.gallery__slider-fraction',
 		type: 'fraction'
 	},
-	updateOnWindowResize: true,
 
+	updateOnWindowResize: true,
 	a11y: {
 		// Включить/выключить
 		enabled: true,
 		// Сообщения
 		prevSlideMessage: 'Предыдущий слайд',
 		nextSlideMessage: 'Следующий слайд',
-		firstSlideMessage: 'Первый слайд',
-		lastSlideMessage: 'Последний слайд',
+		firstSlideMessage: 'Это первый слайд',
+		lastSlideMessage: 'Это последний слайд',
+		paginationBulletMessage: 'перейти к слайду {{index}}',
 		notificationClass: 'swiper-notification',
-		containerMessage: '',
-		containerRoleDescriptionMessage: '',
-		itemRoleDescriptionMessage: '',
+		// containerMessage: '',
+		// containerRoleDescriptionMessage: '',
+		// itemRoleDescriptionMessage: '',
 		// и т.д.
 	},
 
-	keyboard: {
-		// Включить\выключить
-		enabled: true,
-		// Включить\выключить
-		// только когда слайдер
-		// в пределах вьюпорта
-		onlyInViewport: true,
-		// Включить\выключить
-		// управление клавишами
-		// pageUp, pageDown
-		pageUpDown: true,
-	},
 	breakpoints:{
 		500:{
 	slidesPerColumnFill: 'row',
@@ -1545,9 +1534,8 @@ const slider_about = new Swiper('.gallery__slider', {
 			
 
 		1330:{
-			
-			spaceBetween: 50,
-			slidesPerColumnFill: 'row',
+	spaceBetween: 50,
+	slidesPerColumnFill: 'row',
 	slidesPerGroup: 3,
 	updateOnWindowResize: true,
 	slidesPerView: 3,

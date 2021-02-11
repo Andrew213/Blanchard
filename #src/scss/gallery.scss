@@ -153,12 +153,6 @@ color: #fff;
             margin-bottom: 26px;
     }
 
-    &__slide:nth-child(6n+1),
-    :nth-child(6n+2),
-    :nth-child(6n+3){
-        margin-top: 0;
-    }
-
     &__arrow {
             flex-basis: 11px;
     height: 12px;
@@ -404,6 +398,14 @@ color: #fff;
         &__info {
             padding: 126px 40px 20px 48px;
         }
+    }
+}
+
+@media(min-width:1330px){
+    .gallery__slide.gallery__slider-slide.swiper-slide:nth-child(6n+1),
+    :nth-child(6n+2),
+    :nth-child(6n+3){
+        margin-top: 0 !important;
     }
 }
 

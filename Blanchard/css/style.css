@@ -1626,12 +1626,6 @@ textarea.input {
   margin-bottom: 26px;
 }
 
-.gallery__slide:nth-child(6n+1),
-.gallery :nth-child(6n+2),
-.gallery :nth-child(6n+3) {
-  margin-top: 0;
-}
-
 .gallery__arrow {
   -ms-flex-preferred-size: 11px;
       flex-basis: 11px;
@@ -1859,6 +1853,14 @@ textarea.input {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
     background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 1330px) {
+  .gallery__slide.gallery__slider-slide.swiper-slide:nth-child(6n+1),
+  :nth-child(6n+2),
+  :nth-child(6n+3) {
+    margin-top: 0 !important;
   }
 }
 
