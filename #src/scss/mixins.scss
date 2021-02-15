@@ -54,3 +54,9 @@
 @mixin transition {
 	transition: all .3s;
 }
+
+@mixin  background {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
