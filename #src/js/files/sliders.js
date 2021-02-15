@@ -30,7 +30,7 @@ const slider_about = new Swiper('.gallery__slider', {
 	breakpoints:{
 		500:{
 	slidesPerColumnFill: 'row',
-			slidesPerGroup: 1,
+			// slidesPerGroup: 1,
 			slidesPerView: 1,
 			slidesPerColumn: 0,
 			updateOnWindowResize: true,
@@ -44,18 +44,9 @@ const slider_about = new Swiper('.gallery__slider', {
 			spaceBetween: 34,
 		},
 
-		980:{
-			slidesPerColumnFill: 'row',
-	slidesPerGroup: 3,
-	slidesPerView: 3,
-	slidesPerColumn: 2,
-	updateOnWindowResize: true,
-	spaceBetween: 10,
-			},
-
 		1024:{
 			slidesPerColumnFill: 'row',
-	slidesPerGroup: 2,
+	// slidesPerGroup: 2,
 	slidesPerView: 2,
 	slidesPerColumn: 2,
 	updateOnWindowResize: true,
@@ -66,7 +57,7 @@ const slider_about = new Swiper('.gallery__slider', {
 		1330:{
 	spaceBetween: 50,
 	slidesPerColumnFill: 'row',
-	slidesPerGroup: 3,
+	// slidesPerGroup: 3,
 	updateOnWindowResize: true,
 	slidesPerView: 3,
 	slidesPerColumn: 2,
