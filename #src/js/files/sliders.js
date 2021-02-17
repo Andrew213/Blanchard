@@ -85,3 +85,32 @@ slider_about.updateSlides ()
 slider_about.updateSlidesClasses ();
     } 
   });
+
+ let eventsSlider = null;
+
+  function eventsSliderInit () {
+	if (!eventsSlider) {
+	  eventsSlider  = new Swiper('.events__container', {
+					  spaceBetween: 30,
+					  // slidesPerColumnFill: 'row',
+					  slidesPerGroup: 1,
+					  updateOnWindowResize: true,
+					  slidesPerView: 1,
+					  simulateTouch: true,
+					  // Чувствительность свайпа
+					  touchRatio: 1,
+					  // Угол срабатывания свайпа/перетаскивания
+					  touchAngle: 45,
+					  paginationClickable: true,
+					  // Курсор перетаскивания
+					  grabCursor: true,
+					  pagination: {
+						  el: '.swiper-pagination',
+						  clickable: true
+					  
+					  },
+				  });
+	}
+  }
+
+

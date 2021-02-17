@@ -24,7 +24,7 @@ transform: scale(1);
     &__head {
         display: flex;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 22px;
     }
 
     &__title {
@@ -360,10 +360,14 @@ transform: scale(1);
 
         &__head{
             flex-wrap: wrap;
+            margin-bottom: 13px;
         }
-        &__info {
-          position: static;
-        }
+        // &__info {
+        //   position: static;
+        // }
+
+     
+
         &__accordion-list {
             column-count: 3;
             column-gap: 20px;
@@ -396,6 +400,10 @@ transform: scale(1);
         }
 
         &__info-block {
+            position: absolute;
+        }
+
+        &__info-block.catalog__info-block--show{
             position: static;
         }
 
