@@ -24,7 +24,7 @@ transform: scale(1);
     &__head {
         display: flex;
         align-items: center;
-        margin-bottom: 22px;
+        margin-bottom: 26px;
     }
 
     &__title {
@@ -169,7 +169,7 @@ transform: scale(1);
     &__accordion-btn {
     font-weight: 600;
     font-size: 24px;
-    padding: 36px 40px 44px 0;
+    padding: 36px 40px 45px 0;
     border-bottom: 1px solid#CACACA;
     width: 100%;
     text-align: left;
@@ -269,7 +269,7 @@ transform: scale(1);
 
     &__accordion-nameBtn {
         font-size: 16px;
-         padding: 2px 4px;
+         padding: 2px 0px;
          border: 2px solid transparent;
         outline: none;
         &:hover{
@@ -322,7 +322,9 @@ transform: scale(1);
 
   @media(max-width: 1024px){
       .catalog{
-
+        &__head{
+            margin-bottom: 22px;
+        }
         &__lang-list{
             margin-top: 10px;
             margin-bottom: -10px;
@@ -341,9 +343,11 @@ transform: scale(1);
             max-width: 437px;
         }
         &__accordion-list {
-            padding-bottom: 27px;
+            padding-bottom: 50px;
         }
-
+        &__accordion-nameBtn {
+            font-size: 15px;
+        }
       }
   }
 
@@ -362,12 +366,9 @@ transform: scale(1);
             flex-wrap: wrap;
             margin-bottom: 13px;
         }
-        // &__info {
-        //   position: static;
-        // }
-
-     
-
+        &__accordion-list {
+            padding-bottom: 75px;
+        }
         &__accordion-list {
             column-count: 3;
             column-gap: 20px;
@@ -396,7 +397,7 @@ transform: scale(1);
         }
 
         &__accordion-list {
-            padding-bottom: 60px;
+            padding-bottom: 68px;
         }
 
         &__info-block {
@@ -443,14 +444,16 @@ transform: scale(1);
 
 @media(max-width: 440px){
     .catalog{
-
+.container{
+    padding-left: 20px;
+}
         &__lang-btn {
             width: 32px;
             height: 32px;
         }
      
         &__head {
-            margin-top: 30px;
+            margin-top: 6px;
             margin-bottom: 20px;
         }
 
@@ -477,6 +480,7 @@ transform: scale(1);
         }
 
         &__accordion-list {
+            padding-bottom: 60px;
             column-count: 1;
             column-gap: 0px;
         }
@@ -489,9 +493,6 @@ transform: scale(1);
             max-height: 100%;
         }
 
-        &__accordion-list {
-            padding-bottom: 12px;
-        }
 
         &__img {
             margin-bottom: 25px;

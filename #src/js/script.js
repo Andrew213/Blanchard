@@ -29,8 +29,11 @@ window.onload = function() {
             deleteSelectItem(event);
             activatePopup(event);
             activateSpoller(event);
+            selectCountry(event);
             activateCatalogInfoBlock(event);
             activateEventsSection(event);
+            activateEditionsCheckbox(event);
+            activateEditionsAcordion(event);
         });
     };
     
@@ -255,7 +258,7 @@ window.onload = function() {
     }
     
     
-    
+
     
     // POPUPS############################################
     
@@ -318,12 +321,80 @@ window.onload = function() {
     
     
     const langBtn = document.querySelectorAll('.catalog__lang-btn');
+
     langBtn.forEach(el => {
         el.addEventListener('click', ev => {
             langBtn.forEach(el => el.classList.remove('goo'))
-            el.classList.toggle('goo')
+            el.classList.toggle('goo');
+         
         })
-    })
+    });
+
+    function selectCountry (event){
+
+        const countryBtn = event.target.closest('.catalog__lang-btn');
+        if(countryBtn){
+            const allNameBtnList = [...document.querySelectorAll('.catalog__accordion-list')];
+            
+
+            if(countryBtn.classList.contains('catalog__lang-btn--franch')){
+
+                allNameBtnList.forEach(el => {
+                        el.innerHTML = newArrFr;
+                        setNameBtnAttr()
+                })
+            };
+
+            if(countryBtn.classList.contains('catalog__lang-btn--germany')){
+
+                allNameBtnList.forEach(el => {
+                        el.innerHTML = newArrGer;
+                        setNameBtnAttr()
+                })
+            };
+
+            if(countryBtn.classList.contains('catalog__lang-btn--russian')){
+
+                allNameBtnList.forEach(el => {
+                        el.innerHTML = newArrRu;
+                        setNameBtnAttr()
+                })
+            };
+
+            if(countryBtn.classList.contains('catalog__lang-btn--italian')){
+
+                allNameBtnList.forEach(el => {
+                        el.innerHTML = newArrIt;
+                        setNameBtnAttr()
+                })
+            };
+
+            if(countryBtn.classList.contains('catalog__lang-btn--belgium')){
+
+                allNameBtnList.forEach(el => {
+                        el.innerHTML = newArrBelg;
+                        setNameBtnAttr()
+                })
+            }
+        } 
+    }
+
+
+    var arr1 = '3649824598';
+    var arr2 ='АБВГДЕЖЗИК';
+    for (i=0; i<arr1.length; i++) {
+        for (j=0; j<arr2.length; j++){
+        if (arr1[i] == j) 
+            arr1[i]=arr2[j];
+            console.log (arr1);
+        }
+    }
+    
+    
+
+
+
+
     // SPOLLER#########################################################
     function activateSpoller(event){
         const spoller = event.target.closest('.catalog__accordion-btn');
@@ -410,21 +481,23 @@ window.onload = function() {
     
     // CATALOG_INFO_BLOCK ############################################################
     
+    function setNameBtnAttr(){
+        const allNameBtn = [...document.querySelectorAll('.catalog__accordion-nameBtn')];
     
-    
-    const allNameBtn = [...document.querySelectorAll('.catalog__accordion-nameBtn')];
-    
-     for (let index = 0; index < allNameBtn.length; index++) {
-         if(index % 2 ===0){
-             
-             allNameBtn[index].setAttribute('data-tabName', 'Художник 1')
-         }
-    
-         if(index % 2 ===1){
-            allNameBtn[index].setAttribute('data-tabName', 'Художник 2')
+        for (let index = 0; index < allNameBtn.length; index++) {
+            if(index % 2 ===0){
+                
+                allNameBtn[index].setAttribute('data-tabName', 'Художник 1')
+            }
+       
+            if(index % 2 ===1){
+               allNameBtn[index].setAttribute('data-tabName', 'Художник 2')
+           }
+            
         }
-         
-     }
+    };
+    
+
     
         function activateCatalogInfoBlock(event){
             const nameBtn = event.target.closest('.catalog__accordion-nameBtn');
@@ -485,8 +558,11 @@ window.onload = function() {
     }
     
     // EVENTS__SLIDER_resize#############################
-    const mediaQuerySize = 600;
-
+    const mediaQuerySizeEvent = 600;
+    const mediaQuerySizeEdittions = 734;
+    const editionsSliderEl = document.querySelector('.editions__slider');
+    const editionsSliderWrapper = document.querySelector('.editions__slider-wrapper');
+    const editionsSlideElAll = [...document.querySelectorAll('.editions__slide')];
 
 
 function eventsSliderDestroy () {
@@ -495,22 +571,56 @@ function eventsSliderDestroy () {
     eventsSlider = null;
   }
 }
+function editionsSliderDestroy () {
+    if (editionsSlider) {
+      editionsSlider.destroy();
+      editionsSlider = null;
+    }
+  }
+
 
 
 window.addEventListener('resize', function (ev){
  
-  if (this.innerWidth <= mediaQuerySize) {
+  if (this.innerWidth <= mediaQuerySizeEvent) {
     // Инициализировать слайдер если он ещё не был инициализирован
     eventsSliderInit()
   } else {
     // Уничтожить слайдер если он был инициализирован
     eventsSliderDestroy()
   }
+
+  if (this.innerWidth > mediaQuerySizeEdittions) {
+    addClass(editionsSliderEl,'swiper-continer');
+    addClass(editionsSliderWrapper,'swiper-wrapper')
+    editionsSlideElAll.forEach(el => addClass(el,'swiper-slide'))
+    // Инициализировать слайдер если он ещё не был инициализирован
+    editionsSliderInit()
+  } else {
+      removeClass(editionsSliderEl,'swiper-continer');
+      removeClass(editionsSliderWrapper,'swiper-wrapper');
+      editionsSlideElAll.forEach(el => removeClass(el,'swiper-slide'))
+    // Уничтожить слайдер если он был инициализирован
+    editionsSliderDestroy()
+  }
+
 })
 
+if (window.innerWidth > mediaQuerySizeEdittions) {
+    addClass(editionsSliderEl,'swiper-continer');
+    addClass(editionsSliderWrapper,'swiper-wrapper')
+    editionsSlideElAll.forEach(el => addClass(el,'swiper-slide'))
+    // Инициализировать слайдер если он ещё не был инициализирован
+    editionsSliderInit()
+  } else {
+    removeClass(editionsSliderEl,'swiper-continer');
+    removeClass(editionsSliderWrapper,'swiper-wrapper');
+    editionsSlideElAll.forEach(el => removeClass(el,'swiper-slide'))
+    // Уничтожить слайдер если он был инициализирован
+    editionsSliderDestroy()
+  }
 
-
-if (window.innerWidth <= mediaQuerySize) {
+if (window.innerWidth <= mediaQuerySizeEvent) {
   // Инициализировать слайдер если он ещё не был инициализирован
   eventsSliderInit()
 } else {
@@ -518,13 +628,115 @@ if (window.innerWidth <= mediaQuerySize) {
   eventsSliderDestroy()
 }
 
-    
 
-    
-  
-    
- 
-    
-    addClickListener();
+function activateCheckBox(target){
+const checkTarget = target.querySelector('.editions__check');
+const CheckBox =  target.querySelector('.editions__checkbox-box');
+const allCheckBoxes = [...document.querySelectorAll('.editions__checkbox-box')]
+const allCheck = [...document.querySelectorAll('.editions__check')];
+const categoriesAccordionList = getDomEl('.editions__accordion-list');
+const mobileBtn = getDomEl('.editions__accordion-btn--mobile');
+
+
+allCheckBoxes.forEach(el=>removeClass(el,'editions__checkbox-box--active'))
+allCheck.forEach(el => removeClass(el,'editions__check--active'))
+addClass(checkTarget,'editions__check--active');
+addClass(CheckBox,'editions__checkbox-box--active');
+removeClass(categoriesAccordionList,'editions__categories--active')
+removeClass(mobileBtn,'editions__accordion-btn--mobile-active')
+
+
+}
+
+function activateEditionsCheckbox(event){
+    const allCheck = [...document.querySelectorAll('.editions__check')];
+    const targetCheck = event.target.closest('.editions__check');
+    const allCheckBoxes = [...document.querySelectorAll('.editions__checkbox-box')]
+    const liItemEl = event.target.closest('.editions__accordion-item');
+    if(targetCheck){
+        allCheckBoxes.forEach(el=>removeClass(el,'editions__checkbox-box--active'))
+      const closestCheckBox =  targetCheck.querySelector('.editions__checkbox-box');
+        allCheck.forEach(el => removeClass(el,'editions__check--active'))
+        addClass(targetCheck,'editions__check--active');
+        addClass(closestCheckBox,'editions__checkbox-box--active')
+    }
+
+    if(liItemEl){
+        activateCheckBox(liItemEl)
+    }
+}
+
+// EDITIONS__ACCORDION########################
+
+
+function activateEditionsAcordion(event){
+    const categoriesBtn = event.target.closest('.editions__accordion-btn--mobile');
+    const allEditionsItemsAccordion = [...document.querySelectorAll('.editions__accordion-item')];
+    if(categoriesBtn){
+        const accordionBody = getDomEl('.editions__categories');
+        if(accordionBody.classList.contains('editions__categories--active')){
+            removeClass(accordionBody,'editions__categories--active')
+            removeClass(categoriesBtn, 'editions__accordion-btn--mobile-active')
+        }else{
+            addClass(accordionBody,'editions__categories--active')
+            addClass(categoriesBtn, 'editions__accordion-btn--mobile-active')
+            allEditionsItemsAccordion.forEach(el => el.tabIndex = 0)
+        }
+    }
+}
+
+const categoriesBtn = getDomEl('.editions__accordion-btn--mobile');
+const categoriesListEl = getDomEl('.editions__categories');
+
+categoriesBtn.addEventListener('focus', (event)=>{
+    const allEditionsItemsAccordion = [...document.querySelectorAll('.editions__accordion-item')];
+    if(!categoriesListEl.classList.contains('.editions__categories--active')){
+        allEditionsItemsAccordion.forEach(el => el.tabIndex = -1)
+    }else{
+        allEditionsItemsAccordion.forEach(el => el.tabIndex = 0)
+
+    }
+})
+
+
+const allEditionsAccordionItems = [...document.querySelectorAll('.editions__accordion-item')];
+
+
+allEditionsAccordionItems.forEach(el => {
+    el.addEventListener('keyup', (event)=> {
+        if(event.code === 'Enter' || event.code === 'Space'){
+            activateCheckBox(el)
+        }
+    })
+})
+
+// EDITIONS__SLIDE-TITLE########################
+
+const editionsSlideTitle = [...document.querySelectorAll('.editions__slide-title')];
+const editionsSlideSubTitle = [...document.querySelectorAll('.editions__slide-sub-title')];
+
+editionsSlideTitle.forEach(el => {
+    if(el.textContent.length > 18){
+        setInterval(function(){
+            addClass(el,'editions__slide-title--active')
+        },1000)
+        setInterval(function(){
+            removeClass(el,'editions__slide-title--active')
+        },7000)
+    }
+});
+editionsSlideSubTitle.forEach(el => {
+    if(el.textContent.length > 18){
+        setInterval(function(){
+            addClass(el,'editions__slide-title--active')
+        },1000)
+        setInterval(function(){
+            removeClass(el,'editions__slide-title--active')
+        },7000)
+    }
+})
+
+setNameBtnAttr()
+addClickListener();
   };
 

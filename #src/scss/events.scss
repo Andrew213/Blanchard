@@ -1,5 +1,6 @@
 .events {
 margin-top: 20px;
+margin-bottom: 77px;
     &__container {
     }
 
@@ -150,15 +151,17 @@ margin-top: 20px;
 
 @media(max-width:1268px){
     .events{
-        &__item{
-    
-        }
+        margin-top: 14px;
 
         &__inner {
             margin: 0px -8.5px;
         }
         &__item{
             padding: 0 8.5px;
+            
+        }
+        .swiper-slide{
+            margin-bottom: 44px;
         }
 
         &__title{
@@ -203,14 +206,15 @@ margin-top: 20px;
 
 @media(max-width:600px){
     .events{
-        margin-top: 17px;
+        margin-top: 40px;
+        margin-bottom: 47px;
         &__title{
             font-weight: 400;
             font-size: 28px;
-            margin-bottom: 15px;
+            margin-bottom: 17px;
         }
         &__inner{
-            margin: 0 0 35px 0;
+            margin: 0;
             padding: 0;
             flex-wrap: nowrap;
             overflow: initial;
@@ -261,6 +265,9 @@ margin-top: 20px;
         }
         .swiper-pagination-bullet.swiper-pagination-bullet-active{
             background-color: #666;
+        }
+        .swiper-slide {
+            margin-bottom: 32px;
         }
     }
 }
