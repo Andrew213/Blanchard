@@ -68,21 +68,6 @@ const slider_about = new Swiper('.gallery__slider', {
 
 });
 
-// window.addEventListener("resize", (ev) => {
-//     if (window.innerWidth <= 1330) {
-// 		slider_about.update();
-// 		slider_about.updateProgress ()	
-// // пересчитать прогресс swiper
-// slider_about.updateSize ()	
-// // пересчитать размер контейнера для свайпера
-
-// slider_about.updateSlides ()	
-// // пересчитать количество слайдов и их смещения. Полезно после добавления / удаления слайдов с помощью JavaScript
-
-// slider_about.updateSlidesClasses ();
-//     }
-
-//   });
 
  let eventsSlider = null;
  let editionsSlider = null;
@@ -100,6 +85,17 @@ const slider_about = new Swiper('.gallery__slider', {
 					  touchRatio: 1,
 					  // Угол срабатывания свайпа/перетаскивания
 					  touchAngle: 45,
+					  a11y: {
+						// Включить/выключить
+						enabled: true,
+						// Сообщения
+						prevSlideMessage: 'Предыдущий слайд',
+						nextSlideMessage: 'Следующий слайд',
+						firstSlideMessage: 'Это первый слайд',
+						lastSlideMessage: 'Это последний слайд',
+						paginationBulletMessage: 'перейти к слайду {{index}}',
+						notificationClass: 'swiper-notification',
+					},	
 					  paginationClickable: true,
 					  // Курсор перетаскивания
 					  grabCursor: true,
@@ -134,10 +130,6 @@ const slider_about = new Swiper('.gallery__slider', {
 				lastSlideMessage: 'Это последний слайд',
 				paginationBulletMessage: 'перейти к слайду {{index}}',
 				notificationClass: 'swiper-notification',
-				// containerMessage: '',
-				// containerRoleDescriptionMessage: '',
-				// itemRoleDescriptionMessage: '',
-				// и т.д.
 			},		
 		
 			breakpoints:{
@@ -185,5 +177,55 @@ const slider_about = new Swiper('.gallery__slider', {
 	  }
 	
 }
+
+const projects__slider = new Swiper('.projects__slider', {
+	navigation: {
+		nextEl: '.projects__arrow--next',
+		prevEl: '.projects__arrow--prev',
+	},
+	pagination: {
+		el: '.slider-control__fraction',
+		type: 'fraction'
+	},
+
+	a11y: {
+		// Включить/выключить
+		enabled: true,
+		// Сообщения
+		prevSlideMessage: 'Предыдущий слайд',
+		nextSlideMessage: 'Следующий слайд',
+		firstSlideMessage: 'Это первый слайд',
+		lastSlideMessage: 'Это последний слайд',
+		paginationBulletMessage: 'перейти к слайду {{index}}',
+		notificationClass: 'swiper-notification',
+		// containerMessage: '',
+		// containerRoleDescriptionMessage: '',
+		// itemRoleDescriptionMessage: '',
+		// и т.д.
+	},
+
+	breakpoints:{
+	320:{
+			updateOnWindowResize: true,
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+		},
+	620:{
+		updateOnWindowResize: true,
+		spaceBetween: 30,
+		slidesPerGroup: 2,
+		slidesPerView: 2,
+	},
+	1031:{
+		updateOnWindowResize: true,
+		spaceBetween: 50,
+		slidesPerColumn: 1,
+		slidesPerGroup: 3,
+		updateOnWindowResize: true,
+		slidesPerView: 3,
+	}
+	}
+
+});
 
 

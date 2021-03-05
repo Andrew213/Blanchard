@@ -2,7 +2,9 @@
 background-image: url(../img/1920/editions/background.jpg);
 @include background;
 color: #fff;
-
+.section-container{
+    padding-bottom: 63px;
+}
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -228,6 +230,7 @@ display: none;
     }
     .slider-control{
         margin-top: 25px;
+        margin-bottom: 32px;
     }
 }
 
