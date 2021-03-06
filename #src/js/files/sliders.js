@@ -212,7 +212,7 @@ const projects__slider = new Swiper('.projects__slider', {
 		},
 	620:{
 		updateOnWindowResize: true,
-		spaceBetween: 30,
+		spaceBetween: 40,
 		slidesPerGroup: 2,
 		slidesPerView: 2,
 	},

@@ -4597,6 +4597,26 @@ textarea.input {
   .projects__img {
     max-width: 217px;
   }
+  .projects__img-wrapper {
+    max-width: 385px;
+    height: 127px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    margin-top: 7px;
+  }
+  .projects__text {
+    margin-bottom: 57px;
+  }
+  .projects__slider-title {
+    margin-bottom: 33px;
+  }
+  .projects__img-wrapper {
+    max-width: 385px;
+    height: 106px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -4608,6 +4628,13 @@ textarea.input {
   }
   .projects__img {
     max-width: 217px;
+  }
+  .projects__img-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  .projects .swiper-slide {
+    text-align: center;
   }
 }
 
@@ -4643,8 +4670,10 @@ textarea.input {
 
 .contacts__title {
   font-size: 48px;
+  padding-left: 20px;
+  max-width: 1640px;
+  margin: 0 auto;
   margin-bottom: 23px;
-  padding-left: 150px;
 }
 
 .contacts__inner {
@@ -4658,10 +4687,12 @@ textarea.input {
 
 .contacts__feedback {
   padding-left: 153px;
+  padding-right: 10px;
   padding-top: 127px;
   border-top: 1px solid #cacaca;
-  width: 100%;
-  max-width: 675px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 675px;
+          flex: 1 0 675px;
 }
 
 .contacts__feedback-title {
@@ -4739,6 +4770,151 @@ textarea.input {
 .contacts__map [class*='ground-pane'] {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+}
+
+.contacts__map-mobile {
+  display: none;
+}
+
+@media (max-width: 1111px) {
+  .contacts__title {
+    padding-left: 50px;
+  }
+  .contacts__feedback {
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-top: 127px;
+    border-top: 1px solid #cacaca;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 488px;
+            flex: 1 0 488px;
+  }
+  .contacts__form {
+    max-width: 335px;
+  }
+  .contacts__network {
+    width: 60px;
+    height: 60px;
+  }
+  .contacts__network--telegramm {
+    margin-left: 26px;
+  }
+}
+
+@media (max-width: 810px) {
+  .contacts__title {
+    padding-left: 50px;
+  }
+  .contacts__feedback {
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-top: 127px;
+    border-top: 1px solid #cacaca;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 430px;
+            flex: 1 0 430px;
+  }
+  .contacts__form {
+    max-width: 335px;
+  }
+  .contacts__network {
+    width: 40px;
+    height: 40px;
+  }
+  .contacts__network--telegramm {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contacts__title {
+    padding-left: 15px;
+  }
+  .contacts__feedback {
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 127px;
+    border-top: 1px solid #cacaca;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 370px;
+            flex: 1 0 370px;
+  }
+}
+
+@media (max-width: 580px) {
+  .contacts {
+    margin-top: 15px;
+  }
+  .contacts__title {
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 28px;
+  }
+  .contacts__feedback-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .contacts__title {
+    margin-bottom: 19px;
+  }
+  .contacts__feedback-title {
+    margin-bottom: 5px;
+  }
+  .contacts__address {
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .contacts__feedback {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    border-top: none;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .contacts__map {
+    display: none;
+  }
+  .contacts__map-mobile {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 320px;
+  }
+  .contacts__map-mobile [class*='ground-pane'] {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  .contacts__form {
+    max-width: 100%;
+  }
+  .contacts__address {
+    margin-bottom: 20px;
+  }
+  .contacts__form-wrapper {
+    margin-top: 368px;
+  }
+  .contacts__form-title {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 23px;
+  }
+  .contacts__form--name {
+    margin-bottom: 20px;
+  }
+  .contacts__btn {
+    padding: 10px 35px;
+    font-size: 12px;
+    margin-bottom: 26px;
+  }
+  .contacts__network-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 }
 
 .page {
