@@ -288,6 +288,7 @@ function init(){
 		}else if(window.innerWidth > 580 && mapFlag2){
 			mapFlag = true;
 			mapFlag2 = false;
+			mapDesktop.destroy()
 			mapMobile.destroy();
 			 mapDesktop = new ymaps.Map("contacts__map", {
 				center: [55.75870495860828, 37.60096082232978],
