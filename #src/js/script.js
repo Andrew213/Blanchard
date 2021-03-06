@@ -736,7 +736,11 @@ editionsSlideSubTitle.forEach(el => {
     }
 })
 
+// INPUTMASK##########################
+Inputmask({"mask": "+7 (999) 999-9999"}).mask(document.querySelector('input[type="tel"]'));
+
 setNameBtnAttr()
 addClickListener();
+
   };
 

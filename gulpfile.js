@@ -124,6 +124,7 @@ gulp.task("script", function () {
 		"node_modules/focus-visible/dist/focus-visible.min.js",
 		"node_modules/swiper/swiper-bundle.js",
 		"node_modules/focus-manager/focusManager.min.js",
+		"node_modules/inputmask/dist/inputmask.min.js",
 	])
 	  .pipe(concat("libs.min.js"))
 	  .pipe(uglify())
