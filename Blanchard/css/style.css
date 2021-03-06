@@ -4772,10 +4772,6 @@ textarea.input {
           filter: grayscale(1);
 }
 
-.contacts__map-mobile {
-  display: none;
-}
-
 @media (max-width: 1111px) {
   .contacts__title {
     padding-left: 50px;

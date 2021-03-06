@@ -230,19 +230,31 @@ const projects__slider = new Swiper('.projects__slider', {
 
 
 
-
-function x(){
-	var map = new ymaps.Map("contacts__map", {
+let mapFlag = true;
+let mapFlag2 = true;
+if(window.innerWidth > 580){
+	mapFlag2 = false
+}
+function init(){
+	let mapDesktop = new ymaps.Map("contacts__map", {
 		center: [55.75870495860828, 37.60096082232978],
 		zoom: 16,
 		controls: [],
 		suppressMapOpenBlock: true,
 		suppressObsoleteBrowserNotifier: true
 	});
-	myPlacemark = new ymaps.Placemark(map.getCenter(), {
+	let mapMobile = new ymaps.Map("contacts__map-mobile", {
+		center: [55.75870495860828, 37.60096082232978],
+		zoom: 16,
+		controls: [],
+		suppressMapOpenBlock: true,
+		suppressObsoleteBrowserNotifier: true
+	});
+	myPlacemark = new ymaps.Placemark(mapDesktop.getCenter(), {
 		hintContent: 'Собственный значок метки',
 		balloonContent: 'Это красивая метка'
-	 }, {
+	 }, 
+	 {
 		// Опции.
 		// Необходимо указать данный тип макета.
 		iconLayout: 'default#image',
@@ -256,218 +268,237 @@ function x(){
 	 }),
 	 
 	 // Размещение геообъекта на карте.
-	 map.geoObjects.add(myPlacemark)
+	 mapDesktop.geoObjects.add(myPlacemark);
 
-}
+	 mapMobile.destroy()
+	 window.addEventListener('resize', ev => {
+		 		if(window.innerWidth <= 580 && mapFlag){
+			mapDesktop.destroy()
+			mapMobile.destroy()
+		 mapMobile = new ymaps.Map("contacts__map-mobile", {
+				center: [55.75870495860828, 37.60096082232978],
+				zoom: 16,
+				controls: [],
+				suppressMapOpenBlock: true,
+				suppressObsoleteBrowserNotifier: true
+			});
+			mapMobile.geoObjects.add(myPlacemark);
+			mapFlag = false;
+			mapFlag2 = true;
+		}else if(window.innerWidth > 580 && mapFlag2){
+			mapFlag = true;
+			mapFlag2 = false;
+			mapMobile.destroy();
+			 mapDesktop = new ymaps.Map("contacts__map", {
+				center: [55.75870495860828, 37.60096082232978],
+				zoom: 16,
+				controls: [],
+				suppressMapOpenBlock: true,
+				suppressObsoleteBrowserNotifier: true
+			});
+			mapDesktop.geoObjects.add(myPlacemark);
+		}
+	 })
 
-// ####################################
-
-function y(){
-	var map = new ymaps.Map("contacts__map-mobile", {
-		center: [55.75870495860828, 37.60096082232978],
-		zoom: 16,
-		controls: [],
-		suppressMapOpenBlock: true,
-		suppressObsoleteBrowserNotifier: true
-	});
-	myPlacemark = new ymaps.Placemark(map.getCenter(), {
-		hintContent: 'Собственный значок метки',
-		balloonContent: 'Это красивая метка'
-	 }, {
-		// Опции.
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#image',
-		// Своё изображение иконки метки.
-		iconImageHref: '../img/mapIco.svg',
-		// Размеры метки.
-		iconImageSize: [20, 20],
-		// Смещение левого верхнего угла иконки относительно
-		// её "ножки" (точки привязки).
-		iconImageOffset: [0, 50]
-	 }),
 	 
-	 // Размещение геообъекта на карте.
-	 map.geoObjects.add(myPlacemark)
+	if(window.innerWidth <= 580){
+		console.log(mapMobile)
+		mapMobile = new ymaps.Map("contacts__map-mobile", {
+			center: [55.75870495860828, 37.60096082232978],
+			zoom: 16,
+			controls: [],
+			suppressMapOpenBlock: true,
+			suppressObsoleteBrowserNotifier: true
+		});
+		mapMobile.geoObjects.add(myPlacemark);
+	}
 
 }
 
-// window.addEventListener('resize', ev => {
-// 	if(window.innerWidth <= 580){
-// 		ymaps.ready(y);
-// 		ymaps.destroy(x)
-// 		ymaps.destroy(y)
-// 	}else{
-// 		ymaps.destroy(x)
-// 		ymaps.destroy(y)
-// 		ymaps.ready(x);
-// 	}
-// });
+
+
+	ymaps.ready(init);
+
+
+	// const mapContacts = document.querySelector('.contacts__map');
+	// const contactAddress = document.querySelector('.contacts__address');
+
+	// let mapContactsClone = mapContacts.cloneNode();
+
+	// console.log(mapContacts);
+	// console.log(mapContactsClone);
+	// mapContactsClone.classList.add('contacts__map-mobile');
+	// let mapFlag = true;
+	// // mapContactsClone.style.height = '600px'
+	// // mapContacts.remove()
+	// // contactAddress.after(mapContactsClone)
+	// window.addEventListener('resize', ev => {
+	// 	if(window.innerWidth <= 580){
+	// 		// mapContacts.remove()
+	// contactAddress.after(mapContactsClone)
+			
+	// 	}else{
+			
+	// 	}
+	// })
+
+
+// const arrRU = [                   
+//     'Иван Айвазовский',
+//     'Юрий Альберт ',
+//     'Василий Кандинский ',
+//     'Андрей Бартенев',
+//     'Иван Крамской',
+//     'Виктор Борисов-Мусатов',
+//     'Карл Брюллов',
+//     'Владимир Боровиковский',
+//     'Гриша Брускин',
+//     'Давид Бурлюк',
+//     'Эрик Булатов ',
+//     'Виктор Васнецов',
+//     'Владимир Вейсберг',
+//     'Алексей Венецианов',
+//     'Василий Верещагин ',
+//     'Михаил Врубель',
+//     'Николай Ге',
+//     'Наталья Гончарова',
+//     'Феофан Грек',
+//     'Дмитрий Гутов',
+//     'Александр Дейнека',
+//     'Анатолий Зверев',
+//     'Александр Иванов ',
+//     'Константин Звездочетов',
+//     'Константин Коровин'
+// ];
 
 
 
-if(window.innerWidth <= 580){
-	
-	ymaps.ready(y);
-}else{
-
-	ymaps.ready(x);
-}
-const arrRU = [                   
-    'Иван Айвазовский',
-    'Юрий Альберт ',
-    'Василий Кандинский ',
-    'Андрей Бартенев',
-    'Иван Крамской',
-    'Виктор Борисов-Мусатов',
-    'Карл Брюллов',
-    'Владимир Боровиковский',
-    'Гриша Брускин',
-    'Давид Бурлюк',
-    'Эрик Булатов ',
-    'Виктор Васнецов',
-    'Владимир Вейсберг',
-    'Алексей Венецианов',
-    'Василий Верещагин ',
-    'Михаил Врубель',
-    'Николай Ге',
-    'Наталья Гончарова',
-    'Феофан Грек',
-    'Дмитрий Гутов',
-    'Александр Дейнека',
-    'Анатолий Зверев',
-    'Александр Иванов ',
-    'Константин Звездочетов',
-    'Константин Коровин'
-];
 
 
+// const arrFR = [
+//     'Пьер Огюст Ренуар ',
+//     'Антуан Ватто',
+//     'Жак Луи Давид',
+//     'Клод Лоррен',
+//     'Поля Гогена',
+//     'Поль Сезанн',
+//     'Эдуард Мане',
+//     'Жан Огюст Доминик Энгр',
+//     'Никола Пуссен',
+//     'Клод Моне',
+//     'Камиль Писсарро',
+//     'Эдгар Дега',
+//     'Оноре Домье',
+//     'Эжена Делакруа',
+//     'Франсуа Буше',
+//     'Теодор Жерико',
+//     'Анри де Тулуз-Лотрек',
+//     'Жан Батист Камиль Коро',
+//     'Альбер Марке',
+//     'Анри Матисса',
+//     'Гюстава Моро',
+//     'Фредерик Базиль',
+//     'Гюстав Курбе',
+//     'Жан-Леон Жером'
+// ];
 
+// const arrGer = [
+//     'Немецкий художник 1',
+//     'Немецкий художник 2',
+//     'Немецкий художник 3',
+//     'Немецкий художник 4',
+//     'Немецкий художник 5',
+//     'Немецкий художник 6',
+//     'Немецкий художник 7',
+//     'Немецкий художник 8',
+//     'Немецкий художник 9',
+//     'Немецкий художник 10',
+//     'Немецкий художник 11',
+//     'Немецкий художник 12',
+//     'Немецкий художник 13',
+//     'Немецкий художник 14',
+//     'Немецкий художник 15',
+//     'Немецкий художник 16',
+//     'Немецкий художник 17',
+//     'Немецкий художник 18',
+//     'Немецкий художник 19',
+//     'Немецкий художник 20',
+//     'Немецкий художник 21',
+//     'Немецкий художник 22',
+//     'Немецкий художник 23',
+//     'Немецкий художник 24',
+// ];
 
+// const arrBelg = [
+//     'Бельгийский художник 1',
+//     'Бельгийский художник 2',
+//     'Бельгийский художник 3',
+//     'Бельгийский художник 4',
+//     'Бельгийский художник 5',
+//     'Бельгийский художник 6',
+//     'Бельгийский художник 7',
+//     'Бельгийский художник 8',
+//     'Бельгийский художник 9',
+//     'Бельгийский художник 10',
+//     'Бельгийский художник 11',
+//     'Бельгийский художник 12',
+//     'Бельгийский художник 13',
+//     'Бельгийский художник 14',
+//     'Бельгийский художник 15',
+//     'Бельгийский художник 16',
+//     'Бельгийский художник 17',
+//     'Бельгийский художник 18',
+//     'Бельгийский художник 19',
+//     'Бельгийский художник 20',
+//     'Бельгийский художник 21',
+//     'Бельгийский художник 22',
+//     'Бельгийский художник 23',
+//     'Бельгийский художник 24',
+// ];
 
-const arrFR = [
-    'Пьер Огюст Ренуар ',
-    'Антуан Ватто',
-    'Жак Луи Давид',
-    'Клод Лоррен',
-    'Поля Гогена',
-    'Поль Сезанн',
-    'Эдуард Мане',
-    'Жан Огюст Доминик Энгр',
-    'Никола Пуссен',
-    'Клод Моне',
-    'Камиль Писсарро',
-    'Эдгар Дега',
-    'Оноре Домье',
-    'Эжена Делакруа',
-    'Франсуа Буше',
-    'Теодор Жерико',
-    'Анри де Тулуз-Лотрек',
-    'Жан Батист Камиль Коро',
-    'Альбер Марке',
-    'Анри Матисса',
-    'Гюстава Моро',
-    'Фредерик Базиль',
-    'Гюстав Курбе',
-    'Жан-Леон Жером'
-];
+// const arrIt = [
+//     'Бенедетто ди Биндо',
+//     'Бергоньоне, Амброджо',
+//     'Биссоло, Франческо',
+//     'Больтраффио, Джованни',
+//     'Бонсиньори, Франческо',
+//     'Боттичини, Рафаэлло',
+//     'Брамантино',
+//     'Бреа, Людовико',
+//     'Бьяджо д’Антонио Туччи',
+//     'Веккьетта',
+//     'Андреа Верроккьо',
+//     'Доменико Гирландайо',
+//     'Беноццо Гоццоли',
+//     'Граначчи, Франческо',
+//     'Грегорио ди Чекко',
+//     'Джованни да Удине',
+//     'Джованни ди Паоло',
+//     'Джорджоне',
+//     'Парентино, Бернардо',
+//     'Пезеллино',
+//     'Пьетро Перуджино',
+//     'Перуцци, Бальдассаре',
+//     'Пизанелло',
+//     'Пинтуриккьо',
+// ];
 
-const arrGer = [
-    'Немецкий художник 1',
-    'Немецкий художник 2',
-    'Немецкий художник 3',
-    'Немецкий художник 4',
-    'Немецкий художник 5',
-    'Немецкий художник 6',
-    'Немецкий художник 7',
-    'Немецкий художник 8',
-    'Немецкий художник 9',
-    'Немецкий художник 10',
-    'Немецкий художник 11',
-    'Немецкий художник 12',
-    'Немецкий художник 13',
-    'Немецкий художник 14',
-    'Немецкий художник 15',
-    'Немецкий художник 16',
-    'Немецкий художник 17',
-    'Немецкий художник 18',
-    'Немецкий художник 19',
-    'Немецкий художник 20',
-    'Немецкий художник 21',
-    'Немецкий художник 22',
-    'Немецкий художник 23',
-    'Немецкий художник 24',
-];
+// function changeArr(arr){
+//     let newArr = [];
+// for (let index = 0; index < arr.length; index++) {
+//    let element = `<li class="catalog__accardion-item"><button class="catalog__accordion-nameBtn" type="button">${arr[index]}</button></li>`
+//     newArr.push(element)
+// };
 
-const arrBelg = [
-    'Бельгийский художник 1',
-    'Бельгийский художник 2',
-    'Бельгийский художник 3',
-    'Бельгийский художник 4',
-    'Бельгийский художник 5',
-    'Бельгийский художник 6',
-    'Бельгийский художник 7',
-    'Бельгийский художник 8',
-    'Бельгийский художник 9',
-    'Бельгийский художник 10',
-    'Бельгийский художник 11',
-    'Бельгийский художник 12',
-    'Бельгийский художник 13',
-    'Бельгийский художник 14',
-    'Бельгийский художник 15',
-    'Бельгийский художник 16',
-    'Бельгийский художник 17',
-    'Бельгийский художник 18',
-    'Бельгийский художник 19',
-    'Бельгийский художник 20',
-    'Бельгийский художник 21',
-    'Бельгийский художник 22',
-    'Бельгийский художник 23',
-    'Бельгийский художник 24',
-];
+// arr.splice(0,arr.length,newArr.join(''));
+// return arr
+// };
 
-const arrIt = [
-    'Бенедетто ди Биндо',
-    'Бергоньоне, Амброджо',
-    'Биссоло, Франческо',
-    'Больтраффио, Джованни',
-    'Бонсиньори, Франческо',
-    'Боттичини, Рафаэлло',
-    'Брамантино',
-    'Бреа, Людовико',
-    'Бьяджо д’Антонио Туччи',
-    'Веккьетта',
-    'Андреа Верроккьо',
-    'Доменико Гирландайо',
-    'Беноццо Гоццоли',
-    'Граначчи, Франческо',
-    'Грегорио ди Чекко',
-    'Джованни да Удине',
-    'Джованни ди Паоло',
-    'Джорджоне',
-    'Парентино, Бернардо',
-    'Пезеллино',
-    'Пьетро Перуджино',
-    'Перуцци, Бальдассаре',
-    'Пизанелло',
-    'Пинтуриккьо',
-];
-
-function changeArr(arr){
-    let newArr = [];
-for (let index = 0; index < arr.length; index++) {
-   let element = `<li class="catalog__accardion-item"><button class="catalog__accordion-nameBtn" type="button">${arr[index]}</button></li>`
-    newArr.push(element)
-};
-
-arr.splice(0,arr.length,newArr.join(''));
-return arr
-};
-
-const newArrRu = changeArr(arrRU);
-const newArrGer = changeArr(arrGer);
-const newArrIt = changeArr(arrIt);
-const newArrFr = changeArr(arrFR);
-const newArrBelg = changeArr(arrBelg);
+// const newArrRu = changeArr(arrRU);
+// const newArrGer = changeArr(arrGer);
+// const newArrIt = changeArr(arrIt);
+// const newArrFr = changeArr(arrFR);
+// const newArrBelg = changeArr(arrBelg);
 
 window.onload = function() {
     function getDomEl (selector){
