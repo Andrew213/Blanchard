@@ -1,5 +1,5 @@
-ymaps.ready(init);
-function init(){
+
+function x(){
 	var map = new ymaps.Map("contacts__map", {
 		center: [55.75870495860828, 37.60096082232978],
 		zoom: 16,
@@ -30,7 +30,7 @@ function init(){
 
 // ####################################
 
-function init(){
+function y(){
 	var map = new ymaps.Map("contacts__map-mobile", {
 		center: [55.75870495860828, 37.60096082232978],
 		zoom: 16,
@@ -59,3 +59,24 @@ function init(){
 
 }
 
+// window.addEventListener('resize', ev => {
+// 	if(window.innerWidth <= 580){
+// 		ymaps.ready(y);
+// 		ymaps.destroy(x)
+// 		ymaps.destroy(y)
+// 	}else{
+// 		ymaps.destroy(x)
+// 		ymaps.destroy(y)
+// 		ymaps.ready(x);
+// 	}
+// });
+
+
+
+if(window.innerWidth <= 580){
+	
+	ymaps.ready(y);
+}else{
+
+	ymaps.ready(x);
+}
