@@ -1,4 +1,111 @@
-footer{}
+.footer {
+background-color: #000;
+    &__inner {
+        padding-top: 46px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-link {
+    }
+
+    &__logo {
+    }
+
+    &__social-wrapper {
+    }
+
+    &__social {
+    }
+
+    &__social--vk {
+    }
+    &__social-ico{
+        width: 47px;
+        height: 47px;
+    }
+
+    &__social--inst {
+        margin-left: 12px;
+    }
+
+    &__social--fb {
+        margin-left: 10px;
+    }
+}
+.container {
+}
+
+@media(max-width:1024px){
+    .footer{
+        &__inner{
+            padding-top: 38px;
+            padding-bottom: 38px;
+        }
+        &__social-ico{
+            width: 60px;
+            height: 60px;
+        }
+        &__social--inst {
+            margin-left: 26px;
+        }
+    
+        &__social--fb {
+            margin-left: 24px;
+        }
+    }
+}
+
+@media(max-width:450px){
+    .footer {
+        background-color: #000;
+            &__inner {
+                flex-direction: column-reverse;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        
+            &__logo-link {
+            }
+        
+            &__logo {
+                width: 96.8px;
+                height: 21.67px;
+            }
+        
+            &__social-wrapper {
+                margin-bottom: 18px;
+            }
+        
+            &__social {
+            }
+        
+            &__social-ico{
+                width: 50px;
+                height: 50px;
+            }
+        
+      
+            &__social--vk {
+                // // margin-left: 10px;
+                margin-right: -20px;
+            }
+            &__social--inst {
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+        
+            &__social--fb {
+                
+                margin-left: -15px;
+                // margin-right: -30px;
+            }
+ 
+        }
+}
+
 //====================================================================================================
 
 //====================================================================================================

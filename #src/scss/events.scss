@@ -33,7 +33,7 @@ margin-bottom: 77px;
     &__item {
         flex-grow:0;
         flex-shrink: 1;
-        flex-basis: 32.52%;
+        flex-basis: 32.50%;
         padding: 0 15px;
         margin-bottom: 125px;
     }
@@ -187,6 +187,15 @@ margin-bottom: 77px;
         }
         &__btn{
             margin-top: 12px;
+        }
+    }
+}
+
+@media(max-width:861px){
+    .events{
+
+        &__item {
+            flex-basis: 31.50%;
         }
     }
 }
