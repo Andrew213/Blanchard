@@ -1784,7 +1784,7 @@ textarea.input {
   .header__search320--show {
     -webkit-animation: moveTop-show .5s linear;
             animation: moveTop-show .5s linear;
-    top: 60px;
+    top: 45px;
   }
   .header__search-1024px.header__search320-input {
     width: 180px;

@@ -1,4 +1,4 @@
-const arrRU = [                   
+const arr_ru1 = [
     'Иван Айвазовский',
     'Юрий Альберт ',
     'Василий Кандинский ',
@@ -27,10 +27,7 @@ const arrRU = [
 ];
 
 
-
-
-
-const arrFR = [
+const arr_fr1 = [
     'Пьер Огюст Ренуар ',
     'Антуан Ватто',
     'Жак Луи Давид',
@@ -57,7 +54,7 @@ const arrFR = [
     'Жан-Леон Жером'
 ];
 
-const arrGer = [
+const arr_ger1 = [
     'Немецкий художник 1',
     'Немецкий художник 2',
     'Немецкий художник 3',
@@ -84,7 +81,7 @@ const arrGer = [
     'Немецкий художник 24',
 ];
 
-const arrBelg = [
+const arr_belg1 = [
     'Бельгийский художник 1',
     'Бельгийский художник 2',
     'Бельгийский художник 3',
@@ -111,7 +108,7 @@ const arrBelg = [
     'Бельгийский художник 24',
 ];
 
-const arrIt = [
+const arr_it1 = [
     'Бенедетто ди Биндо',
     'Бергоньоне, Амброджо',
     'Биссоло, Франческо',
@@ -138,19 +135,19 @@ const arrIt = [
     'Пинтуриккьо',
 ];
 
-function changeArr(arr){
+function changeArr(arr) {
     let newArr = [];
-for (let index = 0; index < arr.length; index++) {
-   let element = `<li class="catalog__accardion-item"><button class="catalog__accordion-nameBtn" type="button">${arr[index]}</button></li>`
-    newArr.push(element)
+    for (let index = 0; index < arr.length; index++) {
+        let element = `<li class="catalog__accardion-item"><button class="catalog__accordion-nameBtn" type="button">${arr[index]}</button></li>`
+        newArr.push(element)
+    };
+
+    arr.splice(0, arr.length, newArr.join(''));
+    return arr
 };
 
-arr.splice(0,arr.length,newArr.join(''));
-return arr
-};
-
-const newArrRu = changeArr(arrRU);
-const newArrGer = changeArr(arrGer);
-const newArrIt = changeArr(arrIt);
-const newArrFr = changeArr(arrFR);
-const newArrBelg = changeArr(arrBelg);
+const newArrRu = changeArr(arr_ru1);
+const newArrGer = changeArr(arr_ger1);
+const newArrIt = changeArr(arr_it1);
+const newArrFr = changeArr(arr_fr1);
+const newArrBelg = changeArr(arr_belg1);
